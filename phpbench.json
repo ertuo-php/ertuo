@@ -1,6 +1,6 @@
 {
     "bootstrap": "vendor/autoload.php",
-    "path": "benchmark",
+    "path": "lab",
     "reports": {
         "short": {
             "extends": "aggregate",
