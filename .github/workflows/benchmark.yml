@@ -1,0 +1,37 @@
+name: Benchmark
+
+on: [push, pull_request]
+
+jobs:
+  tests:
+    name: Benchmark Ertuo Routing ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [7.4]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up PHP ${{ matrix.php }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: xdebug
+
+      - name: Install dependencies with Composer
+        uses: ramsey/composer-install@v1
+
+      - name: Run Symfony
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony.php --report=short
+
+      - name: Run Symfony Compiled
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony_Compiled.php --report=short
+
+      - name: Run Ertuo Generator
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Generator.php --report=short
+
+      - name: Run Ertuo Array
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=short
