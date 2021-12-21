@@ -517,3 +517,42 @@ $src = ['index'];			// bad locale, no such content page declared
 $src = ['en', 'blog', 'page', 'x5'];	// bad page format
 $src = ['blog', 'post', 'i_know'];	// bad slug format
 ```
+
+# Bitbucket API Benchmarks
+
+The benchmarks are based on [phpbench](https://github/phpbench/phpbench) and are inside the "lab/" folder. The setup is similar to [benchmark-php-routing](https://github.com/kktsvetkov/benchmark-php-routing) and it is also using the **Bitbucket API** routes to compose a somewhat real-world benchmark.
+
+The routes are in [bitbucket-api.txt](lab/Benchmark_Bitbucket/bitbucket-api.txt) and this file is used to compose the benchmarks. Only the routes are used, with the HTTP verbs/methods being ignored. The benchmarks are only to match the full routes, with all the params extracted from the routes ignored as well.
+
+There are also tests for all of the Bitbucket API benchmarks to make it easier to check if the results they deliver are consistent.
+
+### Comparing with Symfony Routing
+
+At the moment there are only two Symfony Routing based benchmarks, one using the regular setup, and one using a compiled version of all of the routes.
+```
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony.php --report=short
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony_Compiled.php --report=short
+```
+
+To compare results run the two Ertuo benchmarks, one using generators to declare the routes, and another one using just plain arrays.
+```
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Generator.php --report=short
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=short
+```
+
+### Comparing with Fully Unfolded Tree
+
+One assumption I wanted to benchmark was if the routing process will be quicker if we start with a fully unfolded tree instead of progressively exploring it at runtime.
+
+To test this I've added two more `Route` classes that use the output from `RouteGroup::toArray()` as their route definitions. Both classes are slightly different in how they move down the routes tree with one using references and the other creating new objects.
+```
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_FullTree_Copy.php --report=short
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_FullTree_Ref.php --report=short
+```
+Both benchmarks are slower then the runtime exploring. Read the "Setup Benchmarks" section to learn why.
+
+### Setup Benchmarks
+
+There is one commented out benchmark called [`_benchSetup()`](lab/Benchmark_Bitbucket/Benchmark.php), that is used to provide a baseline to compare all of the routing benchmarks against. This benchmark only tracks how much time is spent to setup the process before the actual routing. The setup is usually just loading up the route collection.
+
+Uncomment this benchmark if you want to monitor how much time is spent on the setup part of the routing and how time does the real dispatching takes. My observations are that for some scenarios like Symfony Routing and the fully unfolded tree the setup takes way too much time compared to the actual dispatching.
