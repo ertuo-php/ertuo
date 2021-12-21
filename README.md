@@ -69,9 +69,9 @@ This array, called **source array**, is just the request URI exploded at the
 folder separators (traditionally the `/` char), and stripped of any empty
 elements.
 ```
-	"/blog/post/hello-world"	-> array("blog", "post", "hello-world")
-	"/en/about-us//"		-> array("en", "about-us")
-	"/"				-> array()
+"/blog/post/hello-world"	-> array("blog", "post", "hello-world")
+"/en/about-us//"		-> array("en", "about-us")
+"/"				-> array()
 ```
 Use the `Kit::quickExplode()` method to break apart the URI into a source array,
 as I tried to make this method be really quick at doing this. You can also use
@@ -124,13 +124,13 @@ The keys of the `iterable` output are used when looking for the next route in
 the routing process
 
 ```php
-	yield 'blog' => Route::add()
-	->group(function()
-	{
-		yield 'page' => Route::add('_page') ...
+yield 'blog' => Route::add()
+->group(function()
+{
+	yield 'page' => Route::add('_page') ...
 
-		yield 'post' => Route::add('_slug') ...
-	});
+	yield 'post' => Route::add('_slug') ...
+});
 ```
 
 The keys of the `iterable` are indeed used to find the next route in the routing
@@ -140,15 +140,15 @@ when either there is no match, or if the current step is empty. To declare such
 a "default" route, use an empty string as its key
 
 ```php
-	yield 'blog' => Route::add()
-	->group(function()
-	{
-		yield '' => Route::add() ... // this is the default route
+yield 'blog' => Route::add()
+->group(function()
+{
+	yield '' => Route::add() ... // this is the default route
 
-		yield 'page' => Route::add('_page') ...
+	yield 'page' => Route::add('_page') ...
 
-		yield 'post' => Route::add('_slug') ...
-	});
+	yield 'post' => Route::add('_slug') ...
+});
 ```
 
 ### Route Names
@@ -156,7 +156,7 @@ a "default" route, use an empty string as its key
 Routes have optional names, which are used to store the result from the rule matching.
 The route names are the first argument to `RouteGroup::add()`.
 ```php
-	yield '' => Route::add('_locale') ... // Route name is "_locale"
+yield '' => Route::add('_locale') ... // Route name is "_locale"
 ```
 
 ### Route Attributes
@@ -167,13 +167,13 @@ the routing results. The attributes are optional, and they are the second argume
 to `RouteGroup::add()` method.
 
 ```php
-	yield 'blog' => Route::add('', ['i.am' => 'the.walrus']);
+yield 'blog' => Route::add('', ['i.am' => 'the.walrus']);
 ```
 
 You can also use the `RouteGroup::carry()` method to explicitly assign the route attributes.
 
 ```php
-	yield 'blog' => Route::add()->carry(['i.am' => 'the.walrus']);
+yield 'blog' => Route::add()->carry(['i.am' => 'the.walrus']);
 ```
 
 ### Route Rule
@@ -190,8 +190,8 @@ You declare rules using the `RouteGroup::rule()` method. First argument is the
 type of the rule, and the second argument is an array with options for the rule.
 
 ```php
-	// Using "enum" rule where the allowed steps are either "en" or "de"
-	yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
+// Using "enum" rule where the allowed steps are either "en" or "de"
+yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
 ```
 
 There is an optional third argument, that is an array with attributes to the
@@ -199,7 +199,7 @@ assigned to the result if the rule successfully matches the current step. This
 helps to introduce extra attributes when there is a positive match.
 
 ```php
-	yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'], ['has_locale' => true])
+yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'], ['has_locale' => true])
 ```
 
 ### Route Default
@@ -217,7 +217,7 @@ The default fallback data is made of two parts:
 
 You declare the default fallback data using `RouteGroup::default()` method
 ```php
-	yield 'locale' => Route::add('_locale')->default('en', ['has_locale' => false])
+yield 'locale' => Route::add('_locale')->default('en', ['has_locale' => false])
 ```
 
 ### Route Methods
@@ -226,9 +226,9 @@ The `RouteGroup` class has shortcut methods for all of the HTTP methods. Use
 them if you want to attach handlers for specific methods on a route.
 
 ```php
-	yield '' => Route::add()
-		->get('BlogPost::show')
-		->post('BlogPost::update')
+yield '' => Route::add()
+	->get('BlogPost::show')
+	->post('BlogPost::update') ...
 ```
 
 These shortcut methods will store these handlers inside the route attributes using
@@ -236,8 +236,8 @@ a predefined key map. Using the key map you can then read the handler from the
 result attributes.
 
 ```php
-	$method = strtolower($_SERVER['REQUEST_METHOD'] ?? '');
-	$handler = $result->attributes[ "_request_method_{$method}" ] ?? null;
+$method = strtolower($_SERVER['REQUEST_METHOD'] ?? '');
+$handler = $result->attributes[ "_request_method_{$method}" ] ?? null;
 ```
 
 # Dispatching
@@ -246,7 +246,7 @@ A **source array** is dispatched by calling the `dispatch()` method of the
 dispatcher.
 
 ```php
-	$result = $dispatcher->dispatch($src);
+$result = $dispatcher->dispatch($src);
 ```
 
 Considering that the routing process in Ertuo is sort of a chain process,
@@ -255,17 +255,17 @@ You can do this by creating a `Result` object in advance and passing it as
 the second argument to `dispatch()`:
 
 ```php
-	$before = new Ertuo\Result;
-	$before->attributes['time'] = time();
+$before = new Ertuo\Result;
+$before->attributes['time'] = time();
 
-	$result = $dispatcher->dispatch($src, $before);
+$result = $dispatcher->dispatch($src, $before);
 ```
 
 The default dispatcher implementation is `Dispatcher`. You create
 the dispatcher by passing the routes definition as its first argument  
 
 ```php
-	$dispatcher = new Ertuo\Dispatcher($routes);
+$dispatcher = new Ertuo\Dispatcher($routes);
 ```
 
 The second argument is a rules aggregate object. This is the collection of rules
@@ -274,7 +274,7 @@ there is a default rules aggregate object creates from `Rules\DefaultAggregate`.
 
 More information about the rules aggregates is in the "Rules" section below.
 
-# Rules
+# Route Rules
 
 The rules are simple checks. They are applied to steps going through the routes.
 Each route has its own rule. All of the rules referenced in the routing process
@@ -282,13 +282,13 @@ are read from a rules aggregate.
 
 Rules are attached to each route using `RouteGroup::rule()`
 ```php
-	yield '' => Route::add('_id')->rule('id') ...
+yield '' => Route::add('_id')->rule('id') ...
 ```
 
 In most cases rules require additional arguments, and these are passed using an
 array as the second argument to `RouteGroup::rule()`
 ```php
-	yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
+yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
 ```
 
 ### Available Rules
@@ -324,20 +324,20 @@ used in each routing.
 You can read the current rule aggregate from the dispatcher using
 `Dispatcher::getRules()` method
 ```php
-	$arg = $dispatcher->getRules();
+$arg = $dispatcher->getRules();
 ```
 
 You can add more rules to the rule aggregate.
 
 ```php
-	$arg->add('uuid', new UUIDRule());
+$arg->add('uuid', new UUIDRule());
 ```
 
 There is a way to add the rules in a _lazy_ way, using a callback that will
 be triggered only if the rule is requested
 
 ```php
-	$arg->lazy('uuid', fn() => new UUIDRule());
+$arg->lazy('uuid', fn() => new UUIDRule());
 ```
 
 ### Alias Rules
@@ -348,13 +348,13 @@ creating a `"locale"` alias rule that is actually `"enum"` rule with specific
 options
 
 ```php
-	$arg->alias('locale', $arg->fetchRule('enum'), array('en', 'de', 'bg'));
+$arg->alias('locale', $arg->fetchRule('enum'), array('en', 'de', 'bg'));
 ```
 
 You can now reference `"locale"` as a rule in the routes without passing any
 options as arguments
 ```php
-	yield 'locale' => Route::add('_locale')->rule('locale') ...
+yield 'locale' => Route::add('_locale')->rule('locale') ...
 ```
 
 ### Composite Rules
@@ -365,13 +365,13 @@ rule. It is simply a list of rules that will be called consecutively until eithe
 there is a match found, or when the list of composite rules is depleted
 
 ```php
-	// create a composite rule from "id" and "any" rules
-	$agg->lazy('blog_post',
-		fn() => new Ertuo\Rule\CompositeRule(
-			$agg->fetchRule('id'),
-			$agg->fetchRule('any')
-			)
-		);
+// create a composite rule from "id" and "any" rules
+$agg->lazy('blog_post',
+	fn() => new Ertuo\Rule\CompositeRule(
+		$agg->fetchRule('id'),
+		$agg->fetchRule('any')
+		)
+	);
 ```
 
 ### Custom Rules
@@ -381,16 +381,16 @@ You are not limited to the available rules. You can create your own using the
 rule to follow is to only work with non-empty steps.
 
 ```php
-	use Ertuo\Result;
-	use Ertuo\Rule\RuleInterface;
+use Ertuo\Result;
+use Ertuo\Rule\RuleInterface;
 
-	class HanShotFirstRule implements RuleInterface
+class HanShotFirstRule implements RuleInterface
+{
+	function isValid(string $step, array $options, Result $result) : bool
 	{
-		function isValid(string $step, array $options, Result $result) : bool
-		{
-			return !empty($step) && !empty($result->attributes['han.shot']);
-		}
+		return !empty($step) && !empty($result->attributes['han.shot']);
 	}
+}
 ```
 
 As the routing process is a chain process, you can use the data accumulated in
