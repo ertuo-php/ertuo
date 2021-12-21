@@ -526,6 +526,18 @@ The routes are in [bitbucket-api.txt](lab/Benchmark_Bitbucket/bitbucket-api.txt)
 
 There are also tests for all of the Bitbucket API benchmarks to make it easier to check if the results they deliver are consistent.
 
+The benchmarks executed are three:
+
+* `benchLast` that tries to match the last route from the list
+* `benchLongest` that tries to match the longest route from the list
+* `benchTotal` that tries to match every single route from the list
+
+For regular expression based routing the `benchLast` should be slowest one. This is because that is the worst case for that approach as it iterates over the routes until a match is found. Compiled routes significantly reduces the number of routes to check, but more or less the process is the same and the list of routes is checked one by one until a match is found. In other words, as the route collection grows, the slower the regular expression routing gets.
+
+For a step based routing process like Ertuo the `benchLongest` must be the slowest. This is because the deeper you go then a route will have more steps to traverse. In other words, as the route length grows in terms of steps, the slower the step based routing gets as it has more steps to inspect.
+
+The `benchTotal` is just to get an overall average measurement for routing to all of the routes from the list. 
+
 ### Comparing with Symfony Routing
 
 At the moment there are only two Symfony Routing based benchmarks, one using the regular setup, and one using a compiled version of all of the routes.
