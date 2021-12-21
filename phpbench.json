@@ -1,0 +1,13 @@
+{
+    "bootstrap": "vendor/autoload.php",
+    "path": "benchmark",
+    "reports": {
+        "short": {
+            "extends": "aggregate",
+            "cols": [ "benchmark", "subject",
+		    "best", "mean", "mode", "worst",
+		    "stdev", "rstdev", "diff"],
+            "break": ["benchmark"]
+        }
+    }
+}
