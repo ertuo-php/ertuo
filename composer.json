@@ -1,5 +1,6 @@
 {
 	"name": "ertuo-php/router",
+	"license": "MIT",
 	"description": "Better Routing for PHP",
 	"autoload":
 	{
