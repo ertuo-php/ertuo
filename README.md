@@ -3,7 +3,7 @@
 **Ertuo** (anagram of "Route"), is a small PHP library that does routing better
 and faster than conventional regular expression based routers.
 
-TBD: [This article explains how the implementation works and why it is fast.](tbd)
+[This article explains how the implementation works and why it is fast.](http://kaloyan.info/writing/2021/12/22/ertuo-php-routing.html "Ertuo, allegedly the fastest PHP routing library")
 
 # Getting Started
 ```
@@ -536,7 +536,7 @@ For regular expression based routing the `benchLast` should be slowest one. This
 
 For a step based routing process like Ertuo the `benchLongest` must be the slowest. This is because the deeper you go then a route will have more steps to traverse. In other words, as the route length grows in terms of steps, the slower the step based routing gets as it has more steps to inspect.
 
-The `benchTotal` is just to get an overall average measurement for routing to all of the routes from the list. 
+The `benchTotal` is just to get an overall average measurement for routing to all of the routes from the list.
 
 ### Comparing with Symfony Routing
 
