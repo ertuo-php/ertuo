@@ -47,7 +47,7 @@ abstract class Benchmark_Symfony extends Benchmark
 		$routes->add('repositories_workspace_repo_slug_default_reviewers_target_username', new Route('/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}'));
 		$routes->add('repositories_workspace_repo_slug_deploy_keys', new Route('/repositories/{workspace}/{repo_slug}/deploy-keys'));
 		$routes->add('repositories_workspace_repo_slug_deploy_keys_key_id', new Route('/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}'));
-		$routes->add('repositories_workspace_repo_slug_deployments', new Route('/repositories/{workspace}/{repo_slug}/deployments/'));
+		$routes->add('repositories_workspace_repo_slug_deployments', new Route('/repositories/{workspace}/{repo_slug}/deployments'));
 		$routes->add('repositories_workspace_repo_slug_deployments_deployment_uuid', new Route('/repositories/{workspace}/{repo_slug}/deployments/{deployment_uuid}'));
 		$routes->add('repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables', new Route('/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables'));
 		$routes->add('repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables_variable_uuid', new Route('/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}'));
