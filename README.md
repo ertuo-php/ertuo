@@ -95,7 +95,7 @@ Second property is `$result->attributes`. This is where all of the variables
 extracted from the routing process are stored. This will include both URI
 parameters, as well as attributes found along the way.
 
-Last property is `$result-junk`. This array will contain any steps left from
+Last property is `$result->junk`. This array will contain any steps left from
 the source array. This will occur when the routing process stops before all of
 the steps to be processed. You can use the result junk to identify bad URIs,
 and decide what to do with them: either 404 or other more graceful approach
