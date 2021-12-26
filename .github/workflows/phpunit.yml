@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   tests:
-    name: Benchmark Routing ${{ matrix.php }}
+    name: PHPUnit Tests ${{ matrix.php }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -24,5 +24,5 @@ jobs:
       - name: Install dependencies with Composer
         uses: ramsey/composer-install@v1
 
-      - name: Tests
+      - name: Run Tests
         run: vendor/bin/phpunit
