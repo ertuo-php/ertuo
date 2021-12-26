@@ -24,14 +24,38 @@ jobs:
       - name: Install dependencies with Composer
         uses: ramsey/composer-install@v1
 
+      - name: Run Ertuo Generator
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Generator.php --report=short
+
+      - name: Run Ertuo Array
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=short
+
       - name: Run Symfony
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony.php --report=short
 
       - name: Run Symfony Compiled
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony_Compiled.php --report=short
 
-      - name: Run Ertuo Generator
-        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Generator.php --report=short
+      - name: Run FastRoute CharCountBased
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_CharCountBased.php --report=short
 
-      - name: Run Ertuo Array
-        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=short
+      - name: Run FastRoute GroupCountBased
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_GroupCountBased.php --report=short
+
+      - name: Run FastRoute GroupPosBased
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_GroupPosBased.php --report=short
+
+      - name: Run FastRoute MarkBased
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_MarkBased.php --report=short
+
+      - name: Run FastRoute CharCountBased Cached
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_CharCountBased.php --report=short
+
+      - name: Run FastRoute GroupCountBased Cached
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_GroupCountBased.php --report=short
+
+      - name: Run FastRoute GroupPosBased Cached
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_GroupPosBased.php --report=short
+
+      - name: Run FastRoute MarkBased Cached
+        run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_MarkBased.php --report=short
