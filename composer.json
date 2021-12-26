@@ -1,7 +1,15 @@
 {
 	"name": "ertuo-php/router",
-	"license": "MIT",
 	"description": "Better Routing for PHP",
+	"license": "MIT",
+	"authors": [
+		{
+		"name": "Kaloyan (KT) Tsvetkov",
+		"email": "kaloyan@kaloyan.info",
+		"role": "Developer"
+		}
+	],
+
 	"autoload":
 	{
 		"psr-4":
