@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   tests:
-    name: Benchmark Ertuo Routing ${{ matrix.php }}
+    name: Benchmark Routing ${{ matrix.php }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -19,43 +19,43 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          coverage: xdebug
+          coverage: none
 
       - name: Install dependencies with Composer
         uses: ramsey/composer-install@v1
 
-      - name: Run Ertuo Generator
+      - name: Run Ertuo Generator Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Generator.php --report=short
 
-      - name: Run Ertuo Array
+      - name: Run Ertuo Array Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=short
 
-      - name: Run Symfony
+      - name: Run Symfony Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony.php --report=short
 
-      - name: Run Symfony Compiled
+      - name: Run Symfony Compiled Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony_Compiled.php --report=short
 
-      - name: Run FastRoute CharCountBased
+      - name: Run FastRoute CharCountBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_CharCountBased.php --report=short
 
-      - name: Run FastRoute GroupCountBased
+      - name: Run FastRoute GroupCountBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_GroupCountBased.php --report=short
 
-      - name: Run FastRoute GroupPosBased
+      - name: Run FastRoute GroupPosBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_GroupPosBased.php --report=short
 
-      - name: Run FastRoute MarkBased
+      - name: Run FastRoute MarkBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_MarkBased.php --report=short
 
-      - name: Run FastRoute CharCountBased Cached
+      - name: Run FastRoute Cached CharCountBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_CharCountBased.php --report=short
 
-      - name: Run FastRoute GroupCountBased Cached
+      - name: Run FastRoute Cached GroupCountBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_GroupCountBased.php --report=short
 
-      - name: Run FastRoute GroupPosBased Cached
+      - name: Run FastRoute Cached GroupPosBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_GroupPosBased.php --report=short
 
-      - name: Run FastRoute MarkBased Cached
+      - name: Run FastRoute Cached MarkBased Benchmark
         run: vendor/bin/phpbench run lab/Benchmark_Bitbucket_FastRoute_Cached_MarkBased.php --report=short
