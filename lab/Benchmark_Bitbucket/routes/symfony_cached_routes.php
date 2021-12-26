@@ -466,7 +466,7 @@ return [
         679 => [[['_route' => 'repositories_workspace_repo_slug_default_reviewers_target_username'], ['workspace', 'repo_slug', 'target_username'], null, null, false, true, null]],
         704 => [[['_route' => 'repositories_workspace_repo_slug_deploy_keys'], ['workspace', 'repo_slug'], null, null, false, false, null]],
         721 => [[['_route' => 'repositories_workspace_repo_slug_deploy_keys_key_id'], ['workspace', 'repo_slug', 'key_id'], null, null, false, true, null]],
-        738 => [[['_route' => 'repositories_workspace_repo_slug_deployments'], ['workspace', 'repo_slug'], null, null, true, false, null]],
+        738 => [[['_route' => 'repositories_workspace_repo_slug_deployments'], ['workspace', 'repo_slug'], null, null, false, false, null]],
         755 => [[['_route' => 'repositories_workspace_repo_slug_deployments_deployment_uuid'], ['workspace', 'repo_slug', 'deployment_uuid'], null, null, false, true, null]],
         805 => [[['_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables'], ['workspace', 'repo_slug', 'environment_uuid'], null, null, false, false, null]],
         822 => [[['_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables_variable_uuid'], ['workspace', 'repo_slug', 'environment_uuid', 'variable_uuid'], null, null, false, true, null]],

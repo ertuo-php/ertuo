@@ -133,7 +133,7 @@ abstract class Benchmark
 			['route' => '/repositories/paul/george/default-reviewers/ringo', 'result' => ['_route' => 'repositories_workspace_repo_slug_default_reviewers_target_username']],
 			['route' => '/repositories/john/paul/deploy-keys', 'result' => ['_route' => 'repositories_workspace_repo_slug_deploy_keys']],
 			['route' => '/repositories/george/ringo/deploy-keys/john', 'result' => ['_route' => 'repositories_workspace_repo_slug_deploy_keys_key_id']],
-			['route' => '/repositories/paul/george/deployments/', 'result' => ['_route' => 'repositories_workspace_repo_slug_deployments']],
+			['route' => '/repositories/paul/george/deployments', 'result' => ['_route' => 'repositories_workspace_repo_slug_deployments']],
 			['route' => '/repositories/ringo/john/deployments/paul', 'result' => ['_route' => 'repositories_workspace_repo_slug_deployments_deployment_uuid']],
 			['route' => '/repositories/george/ringo/deployments_config/environments/john/variables', 'result' => ['_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables']],
 			['route' => '/repositories/paul/george/deployments_config/environments/ringo/variables/john', 'result' => ['_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables_variable_uuid']],
