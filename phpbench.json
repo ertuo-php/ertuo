@@ -1,12 +1,12 @@
 {
-    "bootstrap": "vendor/autoload.php",
-    "path": "lab",
-    "reports": {
+    "runner.bootstrap": "vendor/autoload.php",
+    "runner.path": "lab",
+    "report.generators": {
         "short": {
             "extends": "aggregate",
             "cols": [ "benchmark", "subject",
 		    "best", "mean", "mode", "worst",
-		    "stdev", "rstdev", "diff"],
+		    "stdev", "rstdev"],
             "break": ["benchmark"]
         }
     }
