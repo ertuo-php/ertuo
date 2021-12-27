@@ -11,19 +11,19 @@ class EnumRuleTest extends TestCase
 	function testEnumWithEmpty()
 	{
 		$enum = new EnumRule;
-		$this->assertFalse($enum->isValid('', ['en', 'bg'], new Result));
+		$this->assertFalse($enum->accept('', ['en', 'bg'], new Result));
 	}
 
 	function testEnumWithOther()
 	{
 		$enum = new EnumRule;
-		$this->assertFalse($enum->isValid('de', ['en', 'bg'], new Result));
+		$this->assertFalse($enum->accept('de', ['en', 'bg'], new Result));
 	}
 
 	function testEnum()
 	{
 		$enum = new EnumRule;
-		$this->assertTrue($enum->isValid('en', ['en', 'bg'], $result = new Result));
-		$this->assertTrue($enum->isValid('bg', ['en', 'bg'], $result));
+		$this->assertTrue($enum->accept('en', ['en', 'bg'], $result = new Result));
+		$this->assertTrue($enum->accept('bg', ['en', 'bg'], $result));
 	}
 }

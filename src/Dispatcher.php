@@ -45,14 +45,14 @@ class Dispatcher implements DispatcherInterface
 			if ($current)
 			{
 				[$type, $options, $extra] = $routes->rule;
-				$found = false;
+				$accepted = false;
 
 				// seek direct match
 				//
 				if ('' == $type)
 				{
 					$next = $routes->readRoute( $current );
-					$found = !empty($next);
+					$accepted = !empty($next);
 				} else
 				{
 					$rule = $this->rules->fetchRule($type);
@@ -62,12 +62,12 @@ class Dispatcher implements DispatcherInterface
 						$rule->setRoute($routes);
 					}
 
-					$found = $rule->isValid($current, $options, clone $result);
+					$accepted = $rule->accept($current, $options, clone $result);
 				}
 
 				// match is found, "consume" the current step
 				//
-				if ($found)
+				if ($accepted)
 				{
 					$result->path[] = $current;
 					array_shift($source);

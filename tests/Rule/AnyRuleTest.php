@@ -11,17 +11,17 @@ class AnyRule_Test extends TestCase
 	function testAnyWithEmpty()
 	{
 		$any = new AnyRule;
-		$this->assertFalse($any->isValid('', [], new Result));
+		$this->assertFalse($any->accept('', [], new Result));
 	}
 
 	function testAny()
 	{
 		$any = new AnyRule;
 
-		$this->assertTrue($any->isValid('.', [], $result = new Result));
-		$this->assertTrue($any->isValid(' ', [], $result));
-		$this->assertTrue($any->isValid('123', [], $result));
-		$this->assertTrue($any->isValid('abc', [], $result));
-		$this->assertTrue($any->isValid('-', [], $result));
+		$this->assertTrue($any->accept('.', [], $result = new Result));
+		$this->assertTrue($any->accept(' ', [], $result));
+		$this->assertTrue($any->accept('123', [], $result));
+		$this->assertTrue($any->accept('abc', [], $result));
+		$this->assertTrue($any->accept('-', [], $result));
 	}
 }

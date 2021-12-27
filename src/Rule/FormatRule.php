@@ -39,7 +39,7 @@ class FormatRule implements RuleInterface
 		return $this;
 	}
 
-	function isValid(string $key, array $formats, Result $result) : bool
+	function accept(string $key, array $formats, Result $result) : bool
 	{
 		if (empty($key))
 		{

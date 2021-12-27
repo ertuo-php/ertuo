@@ -136,8 +136,8 @@ yield 'blog' => Route::add()
 The keys of the `iterable` are indeed used to find the next route in the routing
 process. In some occasions though, specially when there are rules involved, you
 need to be able to have a "default" next route. That is a route that is called
-when either there is no match, or if the current step is empty. To declare such
-a "default" route, use an empty string as its key
+when either the value of the current step is not accepted, or if the current
+step is empty. To declare such a "default" route, use an empty string as its key
 
 ```php
 yield 'blog' => Route::add()
@@ -153,8 +153,7 @@ yield 'blog' => Route::add()
 
 ### Route Names
 
-Routes have optional names, which are used to store the result from the rule matching.
-The route names are the first argument to `RouteGroup::add()`.
+Routes have optional names, which are used to store the result from the rule accepting the current value. The route names are the first argument to `RouteGroup::add()`.
 ```php
 yield '' => Route::add('_locale') ... // Route name is "_locale"
 ```
@@ -178,13 +177,9 @@ yield 'blog' => Route::add()->carry(['i.am' => 'the.walrus']);
 
 ### Route Rule
 
-Each route has a "rule" that is used to find if there is a match for the current
-step from the source array. You can read more about rules in their section below.
+Each route has a "rule" that is used to find if that route will accept the value of the current step from the source array. You can read more about rules in their section below.
 
-If there is a positive match by the route rule for a step, this step is going to
-be included in the result path using the route name. For example, if a route
-named `_locale` has a rule that matches current step `"en"`, then the result
-will have an element called `_locale` with `"en"` as its value.
+If the value of the current step is accepted, this step is going to be included in the result path using the route name. For example, if a route named `_locale` has a rule that accepts current step `"en"`, then the result will have an element called `_locale` with `"en"` as its value.
 
 You declare rules using the `RouteGroup::rule()` method. First argument is the
 type of the rule, and the second argument is an array with options for the rule.
@@ -195,8 +190,8 @@ yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
 ```
 
 There is an optional third argument, that is an array with attributes to the
-assigned to the result if the rule successfully matches the current step. This
-helps to introduce extra attributes when there is a positive match.
+assigned to the result if the rule successfully accepts the current step. This
+helps to introduce extra attributes when there is a step accepted.
 
 ```php
 yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'], ['has_locale' => true])
@@ -211,7 +206,7 @@ non-empty steps.
 
 The default fallback data is made of two parts:
 
-* first, a default value to be returned as a match for the current step
+* first, a default value to be returned as accepted instead of the current step
 
 * second, an array with default attributes to use instead of the route attributes
 
@@ -296,14 +291,14 @@ yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
 There are some rules bundled wit Ertuo that you can use right away. You can find
 them declared in the default aggregate `Rule\DefaultAggregate`.
 
-* `"any"` will match any non-empty value
-* `"enum"` will match a value against a list of predefined options
-* `"exact"` will match against a single value
-* `"format"` is using regular expressions to match different formats such
+* `"any"` will accept any non-empty value
+* `"enum"` will accept a value against a list of predefined options
+* `"exact"` will accept against a single value
+* `"format"` is using regular expressions to accept different formats such
 	as `int`, `alpha`, `alphanum`, `year`, `month`, `slug`, `var`;
 	optionally, you can declare your own formats as well
-* `"id"` will match positive integer values
-* `"path"` is a greedy rule that will match any non-empty value until either
+* `"id"` will accept positive integer values
+* `"path"` is a greedy rule that will accept any non-empty value until either
 	the source array is depleted or some specific value is met
 
 ### Default Rule
@@ -362,7 +357,7 @@ yield 'locale' => Route::add('_locale')->rule('locale') ...
 Similar to alias rules, there are situations in which you need a route rule to
 be able to do several different checks. You can achieve this with a composite
 rule. It is simply a list of rules that will be called consecutively until either
-there is a match found, or when the list of composite rules is depleted
+there is a value accepted, or when the list of composite rules is depleted
 
 ```php
 // create a composite rule from "id" and "any" rules
@@ -386,7 +381,7 @@ use Ertuo\Rule\RuleInterface;
 
 class HanShotFirstRule implements RuleInterface
 {
-	function isValid(string $step, array $options, Result $result) : bool
+	function accept(string $step, array $options, Result $result) : bool
 	{
 		return !empty($step) && !empty($result->attributes['han.shot']);
 	}

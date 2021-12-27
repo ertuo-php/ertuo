@@ -15,7 +15,7 @@ class PathRule implements RuleInterface, CanHandleInterface, RouteAwareInterface
 {
 	use RouteAwareTrait;
 
-	function isValid(string $key, array $until, Result $result) : bool
+	function accept(string $key, array $until, Result $result) : bool
 	{
 		return !in_array($key, $until);
 	}

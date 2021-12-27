@@ -16,9 +16,9 @@ class AliasRule implements RuleInterface
 		$this->options = $options;
 	}
 
-	function isValid(string $step, array $options, Result $result) : bool
+	function accept(string $step, array $options, Result $result) : bool
 	{
-		return $this->rule->isValid(
+		return $this->rule->accept(
 			$step,
 			$options ?: $this->options,
 			$result

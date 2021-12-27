@@ -19,11 +19,11 @@ class CompositeRule implements RuleInterface
 		);
 	}
 
-	function isValid(string $step, array $options, Result $result) : bool
+	function accept(string $step, array $options, Result $result) : bool
 	{
 		foreach ($this->rules as $rule)
 		{
-			if ($rule->isValid($step, $options, $result))
+			if ($rule->accept($step, $options, $result))
 			{
 				return true;
 			}
