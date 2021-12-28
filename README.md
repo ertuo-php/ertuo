@@ -7,7 +7,7 @@ and faster than conventional regular expression based routers.
 
 # Getting Started
 ```
-composer require ertuo-php/ertuo
+composer require ertuo-php/router
 ```
 
 ```php
