@@ -560,6 +560,6 @@ Both benchmarks are slower then the runtime exploring. Read the "Setup Benchmark
 
 ### Setup Benchmarks
 
-There is one commented out benchmark called [`_benchSetup()`](lab/Benchmark_Bitbucket/Benchmark.php), that is used to provide a baseline to compare all of the routing benchmarks against. This benchmark only tracks how much time is spent to setup the process before the actual routing. The setup is usually just loading up the route collection.
+There is one additional benchmark added, that is called [`benchSetup()`](lab/Benchmark_Bitbucket/Benchmark.php). It is used to provide a baseline to compare all of the routing benchmarks against it, as it only tracks how much time is spent to setup the process before the actual routing. The setup is usually just loading up the route collection.
 
-Uncomment this benchmark if you want to monitor how much time is spent on the setup part of the routing and how time does the real dispatching takes. My observations are that for some scenarios like Symfony Routing and the fully unfolded tree the setup takes way too much time compared to the actual dispatching.
+Compare the results from this benchmark if you want to monitor how much time is spent on the setup part of the routing and how time does the real dispatching takes. My observations are that for conventional routing libraries such as Symfony Routing and FastRoute the fully loaded route collection from the setup takes way too much time compared to the actual dispatching.
