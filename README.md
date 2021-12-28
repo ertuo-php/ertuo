@@ -300,6 +300,7 @@ them declared in the default aggregate `Rule\DefaultAggregate`.
 * `"id"` will accept positive integer values
 * `"path"` is a greedy rule that will accept any non-empty value until either
 	the source array is depleted or some specific value is met
+* `"range"` will accept values within a range
 
 ### Default Rule
 
