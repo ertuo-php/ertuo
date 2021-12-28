@@ -533,12 +533,26 @@ For a step based routing process like Ertuo the `benchLongest` must be the slowe
 
 The `benchTotal` is just to get an overall average measurement for routing to all of the routes from the list.
 
-### Comparing with Symfony Routing
+### Comparing with Symfony Routing and FastRoute
 
-At the moment there are only two Symfony Routing based benchmarks, one using the regular setup, and one using a compiled version of all of the routes.
+I've added the same benchmarks with Symfony Routing and FastRoute as I did in https://github.com/kktsvetkov/benchmark-php-routing:
+
+* two Symfony Routing based benchmarks, one using the regular setup, and one using a compiled version of all of the routes.
 ```
 php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony.php --report=short
 php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Symfony_Compiled.php --report=short
+```
+
+* eight FastRoute based benchmarks, 4 regular ones using different strategies and 4 more where the same strategies are cached
+```
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_CharCountBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_GroupCountBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_GroupPosBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_MarkBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_Cached_CharCountBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_Cached_GroupCountBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_Cached_GroupPosBased.php --report=short
+php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_Cached_MarkBased.php --report=short
 ```
 
 To compare results run the two Ertuo benchmarks, one using generators to declare the routes, and another one using just plain arrays.
