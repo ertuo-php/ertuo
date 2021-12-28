@@ -3,15 +3,14 @@
 namespace Ertuo\Tests\Unabridged;
 
 use Ertuo\Route;
-use Ertuo\Dispatcher;
 
 class Admin_Test extends Web_Test
 {
-	function setUp() : void
+	function getRoutes() : Route
 	{
-		$routes = Route::add('_app')->rule('enum', ['admin', 'api'])->default('web');
-
-		$this->dispatcher = new Dispatcher( $routes );
+		return Route::add('_app')
+			->rule('enum', ['admin', 'api'])
+			->default('web');
 	}
 
 	function provide_test_unabridged()

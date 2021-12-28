@@ -9,11 +9,9 @@ use PHPUnit\Framework\TestCase;
 
 class Web_Test extends TestCase
 {
-	protected $dispatcher;
-
-	function setUp() : void
+	function getRoutes() : Route
 	{
-		$routes = Route::add('_app')
+		return Route::add('_app')
 		->rule('enum', ['api', 'admin'])->default('web')
 		->group(function ()
 		{
@@ -48,8 +46,6 @@ class Web_Test extends TestCase
 				});
 			});
 		});
-
-		$this->dispatcher = new Dispatcher( $routes );
 	}
 
 	/**
@@ -57,9 +53,10 @@ class Web_Test extends TestCase
 	*/
 	function test_unabridged(array $source, array $attributes, array $path, array $junk)
 	{
-		$result = $this->dispatcher->dispatch( $source );
+		$dispatcher = new Dispatcher( $routes = $this->getRoutes() );
+		$result = $dispatcher->dispatch( $source );
 
-// $result->src = $source; print_r($result);
+		// $result->src = $source; print_r($result);
 
 		$this->assertEquals($attributes, $result->attributes);
 		$this->assertEquals($path, $result->path);

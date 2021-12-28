@@ -2,14 +2,13 @@
 
 namespace Ertuo\Tests\Unabridged;
 
-use Ertuo\Route;
-use Ertuo\Dispatcher;
+use Ertuo\Route; 
 
 class API_Test extends Web_Test
 {
-	function setUp() : void
+	function getRoutes() : Route
 	{
-		$routes = Route::add('_app')
+		return Route::add('_app')
 		->rule('enum', ['api', 'admin'])->default('web')
 		->group(function()
 		{
@@ -21,8 +20,6 @@ class API_Test extends Web_Test
 				->rule('enum', ['users', 'items']);
 			});
 		});
-
-		$this->dispatcher = new Dispatcher( $routes );
 	}
 
 	function provide_test_unabridged()
