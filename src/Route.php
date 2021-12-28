@@ -9,18 +9,40 @@ class Route extends RouteAbstract
 {
 	use MethodTrait;
 
+	/**
+	* @var array of callbacks used to declaring all of the nested routes
+	* @see Ertuo\Route::group()
+	*/
 	protected $groups = array();
 
+	/**
+	* Introduce a callback for declaring group of nested routes
+	*
+	* @param callable $group
+	* @return self
+	*/
 	function group(callable $group) : self
 	{
 		$this->groups[] = $group;
 		return $this;
 	}
 
+	/**
+	* @var RouteAbstract already known empty route
+	*/
 	protected $empty;
 
+	/**
+	* @var RouteAbstract already known non-empty route
+	*/
 	protected $route;
 
+	/**
+	* Read a nested route identified by $step
+	*
+	* @param string $step value of current step from the source array
+	* @return null|RouteAbstract
+	*/
 	function readRoute(string $step) : ?RouteAbstract
 	{
 		if (!empty($step))

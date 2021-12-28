@@ -65,5 +65,11 @@ abstract class RouteAbstract
 		return $route;
 	}
 
+	/**
+	* Read a nested route identified by $step
+	*
+	* @param string $step value of current step from the source array
+	* @return null|RouteAbstract
+	*/
 	abstract function readRoute(string $step) : ?self;
 }
