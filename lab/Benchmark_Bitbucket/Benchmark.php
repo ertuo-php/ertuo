@@ -18,7 +18,7 @@ abstract class Benchmark
 
 	abstract function setupRouting();
 
-	function _benchSetup()
+	function benchSetup()
 	{
 		$this->setupRouting();
 	}
