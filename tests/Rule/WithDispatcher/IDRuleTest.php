@@ -12,7 +12,7 @@ class IDRuleTest extends TestCase
 {
 	protected $dispatcher;
 
-	function setUp()
+	function setUp() : void
 	{
 		$this->dispatcher = new Dispatcher(
 			Route::add('id')->rule('id')->default('00000'),

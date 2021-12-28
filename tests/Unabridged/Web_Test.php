@@ -11,7 +11,7 @@ class Web_Test extends TestCase
 {
 	protected $dispatcher;
 
-	function setUp()
+	function setUp() : void
 	{
 		$routes = Route::add('_app')
 		->rule('enum', ['api', 'admin'])->default('web')

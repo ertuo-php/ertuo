@@ -12,7 +12,7 @@ class EnumRuleTest extends TestCase
 {
 	protected $dispatcher;
 
-	function setUp()
+	function setUp() : void
 	{
 		$this->dispatcher = new Dispatcher(
 			Route::add('match')->rule('enum', ['en', 'de'])->default('bg'),

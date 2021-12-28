@@ -13,7 +13,7 @@ class AliasRuleTest extends TestCase
 {
 	protected $dispatcher;
 
-	function setUp()
+	function setUp() : void
 	{
 		$aggregate = new RuleAggregate;
 		$locale = new AliasRule(

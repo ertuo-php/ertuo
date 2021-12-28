@@ -39,7 +39,7 @@ class FormatRuleTest extends TestCase
 
 	}
 
-	function _testFormatAlpha()
+	function testFormatAlpha()
 	{
 		$dispatcher = new Dispatcher(
 			Route::add('match')->rule('format', ['alpha']),

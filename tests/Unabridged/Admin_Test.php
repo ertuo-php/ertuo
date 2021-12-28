@@ -7,7 +7,7 @@ use Ertuo\Dispatcher;
 
 class Admin_Test extends Web_Test
 {
-	function setUp()
+	function setUp() : void
 	{
 		$routes = Route::add('_app')->rule('enum', ['admin', 'api'])->default('web');
 

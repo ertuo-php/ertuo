@@ -12,7 +12,7 @@ class AnyRuleTest extends TestCase
 {
 	protected $dispatcher;
 
-	function setUp()
+	function setUp() : void
 	{
 		$this->dispatcher = new Dispatcher(
 			Route::add('match')->rule('any')->default('nomatch'),
