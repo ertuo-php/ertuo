@@ -4,7 +4,7 @@ namespace Ertuo\Lab\Benchmark_Bitbucket;
 
 use Ertuo\Dispatcher;
 use Ertuo\Kit;
-use Ertuo\RouteGroup;
+use Ertuo\Route;
 use Ertuo\Lab\Benchmark_Bitbucket_Ertuo_Array;
 
 use function file_put_contents;
@@ -25,7 +25,7 @@ abstract class Benchmark_Ertuo_FullTree extends Benchmark_Bitbucket_Ertuo_Array
 			);
 	}
 
-	function dump(RouteGroup $routes) : string
+	function dump(Route $routes) : string
 	{
 		return '<?php return '
 			. var_export( $routes->toArray(), true)

@@ -3,7 +3,7 @@
 namespace Ertuo\Tests\Rule\WithDispatcher;
 
 use Ertuo\Dispatcher;
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 use Ertuo\Rule\AnyRule;
 use Ertuo\Rule\Aggregate as RuleAggregate;
 use PHPUnit\Framework\TestCase;

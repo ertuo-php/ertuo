@@ -3,7 +3,7 @@
 namespace Ertuo\Tests\Rule\WithDispatcher;
 
 use Ertuo\Dispatcher;
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 use Ertuo\Rule\CompositeRule;
 use Ertuo\Rule\AliasRule;
 use Ertuo\Rule\FormatRule;

@@ -2,12 +2,12 @@
 
 namespace Ertuo\Lab;
 
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 use Ertuo\Lab\Benchmark_Bitbucket\Benchmark_Ertuo;
 
 class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
 {
-    function loadRoutes() : Route 
+    function loadRoutes() : Route
     {
         $routes = Route::add()
         ->group(function()
@@ -22,7 +22,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                         ->group(function()
                         {
                             return array(
-                                 '' => Route::add()                                
+                                 '' => Route::add()
                                 ->group(function()
                                 {
                                     return array(
@@ -48,12 +48,12 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                 ->group(function()
                 {
                     return array(
-                         '' => Route::add()                        
+                         '' => Route::add()
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug'])
                         ->group(function()
                         {
                             return array(
-                                 '' => Route::add()                                
+                                 '' => Route::add()
                                 ->group(function()
                                 {
                                     return array(
@@ -74,7 +74,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->group(function()
                                                 {
                                                     return array(
@@ -88,7 +88,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                         ->group(function()
                                                         {
                                                             return array(
-                                                                 '' => Route::add()                                                                
+                                                                 '' => Route::add()
                                                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_commit_commit_properties_app_key_property_name']),
                                                             );
                                                         }),
@@ -100,7 +100,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                         ->group(function()
                                                         {
                                                             return array(
-                                                                 '' => Route::add()                                                                
+                                                                 '' => Route::add()
                                                                 ->group(function()
                                                                 {
                                                                     return array(
@@ -151,7 +151,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                 ->group(function()
                                                 {
                                                     return array(
-                                                         '' => Route::add()                                                        
+                                                         '' => Route::add()
                                                         ->group(function()
                                                         {
                                                             return array(
@@ -180,7 +180,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->group(function()
                                                 {
                                                     return array(
@@ -196,7 +196,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_filehistory_commit_path']),
                                             );
                                         }),
@@ -221,7 +221,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->group(function()
                                                 {
                                                     return array(
@@ -261,7 +261,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                 ->group(function()
                                                 {
                                                     return array(
-                                                         '' => Route::add()                                                        
+                                                         '' => Route::add()
                                                         ->group(function()
                                                         {
                                                             return array(
@@ -280,7 +280,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->group(function()
                                                 {
                                                     return array(
@@ -289,7 +289,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                         ->group(function()
                                                         {
                                                             return array(
-                                                                 '' => Route::add()                                                                
+                                                                 '' => Route::add()
                                                                 ->group(function()
                                                                 {
                                                                     return array(
@@ -307,7 +307,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                                                 ->group(function()
                                                                                 {
                                                                                     return array(
-                                                                                         '' => Route::add()                                                                                        
+                                                                                         '' => Route::add()
                                                                                         ->group(function()
                                                                                         {
                                                                                             return array(
@@ -344,7 +344,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                 ->group(function()
                                                 {
                                                     return array(
-                                                         '' => Route::add()                                                        
+                                                         '' => Route::add()
                                                         ->group(function()
                                                         {
                                                             return array(
@@ -378,7 +378,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_properties_app_key_property_name']),
                                             );
                                         }),
@@ -395,7 +395,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->group(function()
                                                 {
                                                     return array(
@@ -431,7 +431,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                         'statuses' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_statuses']),
 
                                                     );
-                                                })                                                
+                                                })
                                                 ->group(function()
                                                 {
                                                     return array(
@@ -440,7 +440,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                         ->group(function()
                                                         {
                                                             return array(
-                                                                 '' => Route::add()                                                                
+                                                                 '' => Route::add()
                                                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties_app_key_property_name']),
                                                             );
                                                         }),
@@ -468,7 +468,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                         ->group(function()
                                         {
                                             return array(
-                                                 '' => Route::add()                                                
+                                                 '' => Route::add()
                                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_src_commit_path']),
                                             );
                                         }),
@@ -490,12 +490,12 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                 ->group(function()
                 {
                     return array(
-                         '' => Route::add()                        
+                         '' => Route::add()
                         ->rule('any', [], ['_route' => 'snippets_workspace_encoded_id'])
                         ->group(function()
                         {
                             return array(
-                                 '' => Route::add()                                
+                                 '' => Route::add()
                                 ->group(function()
                                 {
                                     return array(
@@ -518,7 +518,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                 ->group(function()
                                 {
                                     return array(
-                                         '' => Route::add()                                        
+                                         '' => Route::add()
                                         ->group(function()
                                         {
                                             return array(
@@ -526,7 +526,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                 ->rule('any', [], ['_route' => 'snippets_workspace_encoded_id_node_id_files_path']),
 
                                             );
-                                        })                                        
+                                        })
                                         ->group(function()
                                         {
                                             return array(
@@ -548,7 +548,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                 ->group(function()
                 {
                     return array(
-                         '' => Route::add()                        
+                         '' => Route::add()
                         ->group(function()
                         {
                             return array(
@@ -594,7 +594,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                 }),
 
                             );
-                        })                        
+                        })
                         ->group(function()
                         {
                             return array(
@@ -633,7 +633,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                 ->group(function()
                 {
                     return array(
-                         '' => Route::add()                        
+                         '' => Route::add()
                         ->group(function()
                         {
                             return array(
@@ -655,7 +655,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                 ->group(function()
                                 {
                                     return array(
-                                         '' => Route::add()                                        
+                                         '' => Route::add()
                                         ->rule('any', [], ['_route' => 'users_selected_user_properties_app_key_property_name']),
                                     );
                                 }),
@@ -673,14 +673,14 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                 ->rule('any', [], ['_route' => 'users_selected_user_ssh_keys_key_id']),
 
                             );
-                        })                        
+                        })
                         ->group(function()
                         {
                             return array(
                                 'members' => Route::add('', ['_route' => 'users_username_members']),
 
                             );
-                        })                        
+                        })
                         ->group(function()
                         {
                             return array(
@@ -696,7 +696,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                 ->group(function()
                 {
                     return array(
-                         '' => Route::add()                        
+                         '' => Route::add()
                         ->group(function()
                         {
                             return array(
@@ -736,7 +736,7 @@ class Benchmark_Bitbucket_Ertuo_Array extends Benchmark_Ertuo
                                                 ->group(function()
                                                 {
                                                     return array(
-                                                         '' => Route::add()                                                        
+                                                         '' => Route::add()
                                                         ->group(function()
                                                         {
                                                             return array(

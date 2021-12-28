@@ -2,7 +2,7 @@
 
 namespace Ertuo\Tests\Unabridged;
 
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 use Ertuo\Dispatcher;
 
 use PHPUnit\Framework\TestCase;

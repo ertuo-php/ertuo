@@ -5,7 +5,7 @@ namespace Ertuo;
 use Ertuo\MethodTrait;
 use Ertuo\RouteAbstract;
 
-class RouteGroup extends RouteAbstract
+class Route extends RouteAbstract
 {
 	use MethodTrait;
 

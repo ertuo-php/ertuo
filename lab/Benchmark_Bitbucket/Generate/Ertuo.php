@@ -55,7 +55,7 @@ abstract class Ertuo
 		. "namespace Ertuo\Lab;\n"
 		. "\n"
 
-		. "use Ertuo\RouteGroup as Route;\n"
+		. "use Ertuo\Route;\n"
 		. "use Ertuo\Lab\Benchmark_Bitbucket\Benchmark_Ertuo;\n"
 		. "\n"
 

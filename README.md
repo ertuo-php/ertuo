@@ -11,7 +11,7 @@ composer require ertuo-php/router
 ```
 
 ```php
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 
 $routes = Route::add('_locale')
 	->rule('enum', ['en', 'de'])->default('en')
@@ -108,17 +108,15 @@ filesystem, with each route having one or more routes nested inside it.
 
 ### Route Declaration
 
-Default way of declaring routes is using the `RouteGroup` class, and its `RouteGroup::add()`
-method. I recommend introducing `RouteGroup` when importing with a shorter class
-as alias so that you type less.
+Default way of declaring routes is using the `Route::add()` method
 
 ```php
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 
 $routes = Route::add() ...
 ```
 
-To add nested routes, use the `RouteGroup::group()` method. Its argument is a
+To add nested routes, use the `Route::group()` method. Its argument is a
 callback that returns something `iterable`, like an array, an iterator or a generator.
 The keys of the `iterable` output are used when looking for the next route in
 the routing process
@@ -153,7 +151,8 @@ yield 'blog' => Route::add()
 
 ### Route Names
 
-Routes have optional names, which are used to store the result from the rule accepting the current value. The route names are the first argument to `RouteGroup::add()`.
+Routes have optional names, which are used to store the result from the rule
+accepting the current value. The route names are the first argument to `Route::add()`.
 ```php
 yield '' => Route::add('_locale') ... // Route name is "_locale"
 ```
@@ -163,13 +162,13 @@ yield '' => Route::add('_locale') ... // Route name is "_locale"
 Additionally, routes have attributes associated with them. Think of them as the
 contents of a file. When a route is being processed, its attributes are added to
 the routing results. The attributes are optional, and they are the second argument
-to `RouteGroup::add()` method.
+to `Route::add()` method.
 
 ```php
 yield 'blog' => Route::add('', ['i.am' => 'the.walrus']);
 ```
 
-You can also use the `RouteGroup::carry()` method to explicitly assign the route attributes.
+You can also use the `Route::carry()` method to explicitly assign the route attributes.
 
 ```php
 yield 'blog' => Route::add()->carry(['i.am' => 'the.walrus']);
@@ -181,7 +180,7 @@ Each route has a "rule" that is used to find if that route will accept the value
 
 If the value of the current step is accepted, this step is going to be included in the result path using the route name. For example, if a route named `_locale` has a rule that accepts current step `"en"`, then the result will have an element called `_locale` with `"en"` as its value.
 
-You declare rules using the `RouteGroup::rule()` method. First argument is the
+You declare rules using the `Route::rule()` method. First argument is the
 type of the rule, and the second argument is an array with options for the rule.
 
 ```php
@@ -210,14 +209,14 @@ The default fallback data is made of two parts:
 
 * second, an array with default attributes to use instead of the route attributes
 
-You declare the default fallback data using `RouteGroup::default()` method
+You declare the default fallback data using `Route::default()` method
 ```php
 yield 'locale' => Route::add('_locale')->default('en', ['has_locale' => false])
 ```
 
 ### Route Methods
 
-The `RouteGroup` class has shortcut methods for all of the HTTP methods. Use
+The `Route` class has shortcut methods for all of the HTTP methods. Use
 them if you want to attach handlers for specific methods on a route.
 
 ```php
@@ -275,13 +274,13 @@ The rules are simple checks. They are applied to steps going through the routes.
 Each route has its own rule. All of the rules referenced in the routing process
 are read from a rules aggregate.
 
-Rules are attached to each route using `RouteGroup::rule()`
+Rules are attached to each route using `Route::rule()`
 ```php
 yield '' => Route::add('_id')->rule('id') ...
 ```
 
 In most cases rules require additional arguments, and these are passed using an
-array as the second argument to `RouteGroup::rule()`
+array as the second argument to `Route::rule()`
 ```php
 yield 'locale' => Route::add('_locale')->rule('enum', ['en', 'de'])
 ```
@@ -395,7 +394,7 @@ whether some details have already been collected in the result or not.
 
 # More Features
 
-You can dump of all of the routes as array using `RouteGroup::toArray()`. For
+You can dump of all of the routes as array using `Route::toArray()`. For
 now I've used this for a benchmark comparing reading from a completely built-tree
 vs. progressively exploring the tree at runtime (runtime is faster).
 
@@ -436,7 +435,7 @@ The `"blog"` controller will do two things:
 So, here is the routes declaration:
 
 ```php
-use Ertuo\RouteGroup as Route;
+use Ertuo\Route;
 
 $routes = Route::add('_locale')
 	->rule('enum', ['en', 'de'])->default('en')
@@ -566,7 +565,7 @@ php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=sho
 
 One assumption I wanted to benchmark was if the routing process will be quicker if we start with a fully unfolded tree instead of progressively exploring it at runtime.
 
-To test this I've added two more `Route` classes that use the output from `RouteGroup::toArray()` as their route definitions. Both classes are slightly different in how they move down the routes tree with one using references and the other creating new objects.
+To test this I've added two more `Route` classes that use the output from `Route::toArray()` as their route definitions. Both classes are slightly different in how they move down the routes tree with one using references and the other creating new objects.
 ```
 php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_FullTree_Copy.php --report=short
 php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_FullTree_Ref.php --report=short
