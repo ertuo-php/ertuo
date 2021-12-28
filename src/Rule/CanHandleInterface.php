@@ -3,9 +3,9 @@
 namespace Ertuo\Rule;
 
 use Ertuo\Result;
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 interface CanHandleInterface
 {
-	function handle(string $current, string $step, array $attributes, Result $result) : ?Route;
+	function handle(string $current, string $step, array $attributes, Result $result) : ?RouteAbstract;
 }

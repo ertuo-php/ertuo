@@ -4,7 +4,7 @@ namespace Ertuo;
 
 use Ertuo\DispatcherInterface;
 use Ertuo\Result;
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 use Ertuo\RouteAwareInterface;
 use Ertuo\Rule\CanHandleInterface;
 use Ertuo\Rule\DefaultAggregate as DefaultRuleAggregate;
@@ -17,7 +17,7 @@ class Dispatcher implements DispatcherInterface
 {
 	protected $routes;
 
-	function __construct(Route $routes, RuleAggregate $rules = null)
+	function __construct(RouteAbstract $routes, RuleAggregate $rules = null)
 	{
 		$this->routes = $routes;
 		$this->rules = $rules ?? new DefaultRuleAggregate;
@@ -108,10 +108,6 @@ class Dispatcher implements DispatcherInterface
 					 	? $next
 						: $routes->readRoute( '' );
 				}
-
-				// $routes = ($step && ( $next = $routes->readRoute( $step ) ) )
-				//  	? $next
-				// 	: $routes->readRoute( '' );
 			}
 
 			// attributes associated with the new route ?

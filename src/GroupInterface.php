@@ -2,9 +2,9 @@
 
 namespace Ertuo;
 
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 interface GroupInterface
 {
-	function readRoute(string $step) : ?Route;
+	function readRoute(string $step) : ?RouteAbstract;
 }

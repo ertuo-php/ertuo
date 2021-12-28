@@ -2,10 +2,10 @@
 
 namespace Ertuo;
 
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 interface RouteAwareInterface
 {
-	function setRoute(Route $route) : self;
-	function getRoute() : Route;
+	function setRoute(RouteAbstract $route) : self;
+	function getRoute() : RouteAbstract;
 }

@@ -6,7 +6,7 @@ use Ertuo\GroupInterface;
 
 use function get_called_class;
 
-abstract class Route implements GroupInterface
+abstract class RouteAbstract implements GroupInterface
 {
 	public string $name = '';
 

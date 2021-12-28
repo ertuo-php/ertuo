@@ -2,19 +2,19 @@
 
 namespace Ertuo;
 
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 trait RouteAwareTrait
 {
 	protected $route;
 
-	function setRoute(Route $route) : self
+	function setRoute(RouteAbstract $route) : self
 	{
 		$this->route = $route;
 		return $this;
 	}
 
-	function getRoute() : Route
+	function getRoute() : RouteAbstract
 	{
 		return $this->route;
 	}

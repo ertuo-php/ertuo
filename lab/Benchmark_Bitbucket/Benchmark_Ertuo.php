@@ -4,7 +4,7 @@ namespace Ertuo\Lab\Benchmark_Bitbucket;
 
 use Ertuo\Dispatcher;
 use Ertuo\Kit;
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 abstract class Benchmark_Ertuo extends Benchmark
 {
@@ -23,5 +23,5 @@ abstract class Benchmark_Ertuo extends Benchmark
 		return $result->attributes;
 	}
 
-	abstract function loadRoutes() : Route;
+	abstract function loadRoutes() : RouteAbstract;
 }

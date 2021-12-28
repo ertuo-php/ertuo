@@ -4,9 +4,9 @@ namespace Ertuo;
 
 use Ertuo\GroupInterface;
 use Ertuo\MethodTrait;
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
-class RouteGroup extends Route implements GroupInterface
+class RouteGroup extends RouteAbstract implements GroupInterface
 {
 	use MethodTrait;
 
@@ -22,7 +22,7 @@ class RouteGroup extends Route implements GroupInterface
 
 	protected $route;
 
-	function readRoute(string $step) : ?Route
+	function readRoute(string $step) : ?RouteAbstract
 	{
 		if (!empty($step))
 		{
@@ -43,7 +43,7 @@ class RouteGroup extends Route implements GroupInterface
 			$routes = $group($this);
 			foreach ($routes as $key => $route)
 			{
-				if (!$route instanceOf Route)
+				if (!$route instanceOf RouteAbstract)
 				{
 					continue;
 				}
@@ -81,7 +81,7 @@ class RouteGroup extends Route implements GroupInterface
 			$routes = $group($this);
 			foreach ($routes as $key => $route)
 			{
-				if (!$route instanceOf Route)
+				if (!$route instanceOf RouteAbstract)
 				{
 					continue;
 				}

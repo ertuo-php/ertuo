@@ -5,7 +5,7 @@ namespace Ertuo\Rule;
 use Ertuo\Result;
 use Ertuo\RouteAwareInterface;
 use Ertuo\RouteAwareTrait;
-use Ertuo\Route;
+use Ertuo\RouteAbstract;
 use Ertuo\Rule\CanHandleInterface;
 use Ertuo\Rule\RuleInterface;
 
@@ -20,7 +20,7 @@ class PathRule implements RuleInterface, CanHandleInterface, RouteAwareInterface
 		return !in_array($key, $until);
 	}
 
-	function handle(string $current, string $step, array $attributes, Result $result) : ?Route
+	function handle(string $current, string $step, array $attributes, Result $result) : ?RouteAbstract
 	{
 		$route = $this->getRoute();
 
