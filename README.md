@@ -392,11 +392,67 @@ As the routing process is a chain process, you can use the data accumulated in
 the result object as well. This will allow you to make decisions based on
 whether some details have already been collected in the result or not.
 
-# More Features
+# Export
 
 You can dump of all of the routes as array using `Route::toArray()`. For
 now I've used this for a benchmark comparing reading from a completely built-tree
 vs. progressively exploring the tree at runtime (runtime is faster).
+
+# Builders
+
+You can use the "builders" to create the PHP code for the route declaration.
+Under the hood the builders are using the output from `Route::toArray()`.
+
+In what situation are builders useful? Certainly most web apps have modules or
+plugins or other parts that will want to introduce their own routes. It is a
+VERY BAD IDEA to do this at runtime using the routes tree as it will decrease
+the performance of the router. After all you will be added routes that are
+probably only occasionally going to be used. This goes against the whole
+concept of progressively unfolding the route declaration tree when doing the
+actual routing.
+
+So, what's the plan then ? Well, you just don't do it at runtime. When deploying
+or when regenerating cache you build your full tree. First, you take your route
+tree and allow all of the modules to add their routes to it. Second, after the
+tree is now "fully grown", you pass it to a builder that will generate the PHP
+code for it to allow it to be unfolded using the `Route::group()` callbacks.
+
+```php
+
+use Ertuo\Route;
+use Ertuo\Builder\BuilderWithArrays;
+
+$routes = Route::add()->...
+
+$php = (new BuilderWithArrays)->buildTree($routes);
+file_put_contents('/somewhere/where/routes/live/routes.php', $php);
+```
+
+There are so far two built-in builders, `BuilderWithArrays` and `BuilderWithGenerators`.
+They are almost the same, and the only difference between them is that one uses
+arrays to declare the nested routes, while the other uses `yield` syntax and
+generators.
+
+The generated code for the route tree looks something like this:
+
+```php
+<?php
+
+use Ertuo\Route;
+
+return $routes = Route::add('_app', [])
+->rule('enum', ['api', 'admin', ], [])->default('web', [])
+->group(function()
+{
+    return array(
+
+        '' => Route::add('_locale', [])
+        ->rule('enum', ['en', 'de', ], [])->default('en', [])
+        ->group(function()
+        {
+            return array( ...
+
+```
 
 # A Better Example
 
