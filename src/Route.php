@@ -29,14 +29,25 @@ class Route extends RouteAbstract implements ExportInterface
 	}
 
 	/**
-	* @var RouteAbstract already known empty route
+	* @var RouteAbstract already known route for empty step
 	*/
 	protected $empty;
 
 	/**
-	* @var RouteAbstract already known non-empty route
+	* @var RouteAbstract already known route for non-empty step
 	*/
 	protected $route;
+
+	/**
+	* Resets the already known routes for empty and non-empty steps
+	*
+	* @return self
+	*/
+	function reset() : self
+	{
+		$this->empty = $this->route = null;
+		return $this;
+	}
 
 	/**
 	* Read a nested route identified by $step
@@ -46,6 +57,8 @@ class Route extends RouteAbstract implements ExportInterface
 	*/
 	function readRoute(string $step) : ?RouteAbstract
 	{
+		// are there already known routes ?
+		//
 		if (!empty($step))
 		{
 			if (!empty($this->route))
