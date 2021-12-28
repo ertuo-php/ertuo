@@ -26,44 +26,67 @@ trait MethodTrait
 
 	protected function assignMethod($method, $handler) : self
 	{
-		$key = $this->methodMap[ $method ] ?? "_route_method_{$method}";
+		$key = self::$methodMap[ $method ] ?? "_route_method_{$method}";
 		$this->attributes[ $key ] = $handler;
 
 		return $this;
 	}
 
-	function get($handler)
+	function get($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
 	}
 
-	function post($handler)
+	function post($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
 	}
 
-	function put($handler)
+	function put($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
 	}
 
-	function delete($handler)
+	function delete($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
 	}
 
-	function patch($handler)
+	function patch($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
 	}
 
-	function head($handler)
+	function head($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
 	}
 
-	function options($handler)
+	function options($handler) : self
 	{
 		return $this->assignMethod(__FUNCTION__, $handler);
+	}
+
+	function match($handler, ...$methods) : self
+	{
+		foreach ($methods as $method)
+		{
+			if (!empty(self::$methodMap[ $method ]))
+			{
+				$this->assignMethod($method, $handler);
+			}
+		}
+
+		return $this;
+	}
+
+	function any($handler) : self
+	{
+		foreach (self::$methodMap as $method => $key)
+		{
+			$this->assignMethod($method, $handler);
+		}
+
+		return $this;
 	}
 }
