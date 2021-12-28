@@ -2,7 +2,6 @@
 
 namespace Ertuo\Lab\FullTree;
 
-use Ertuo\GroupInterface;
 use Ertuo\RouteAbstract;
 
 /**
@@ -10,7 +9,7 @@ use Ertuo\RouteAbstract;
 *
 * @see Ertuo\Lab\Benchmark_Bitbucket_Ertuo_FullTree
 */
-class RouteFull_Ref extends RouteAbstract implements GroupInterface
+class RouteFull_Ref extends RouteAbstract
 {
 	private $all;
 

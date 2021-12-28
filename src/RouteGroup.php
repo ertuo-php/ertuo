@@ -2,11 +2,10 @@
 
 namespace Ertuo;
 
-use Ertuo\GroupInterface;
 use Ertuo\MethodTrait;
 use Ertuo\RouteAbstract;
 
-class RouteGroup extends RouteAbstract implements GroupInterface
+class RouteGroup extends RouteAbstract
 {
 	use MethodTrait;
 

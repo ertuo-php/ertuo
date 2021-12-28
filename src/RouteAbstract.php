@@ -2,11 +2,9 @@
 
 namespace Ertuo;
 
-use Ertuo\GroupInterface;
-
 use function get_called_class;
 
-abstract class RouteAbstract implements GroupInterface
+abstract class RouteAbstract
 {
 	public string $name = '';
 
@@ -66,4 +64,6 @@ abstract class RouteAbstract implements GroupInterface
 
 		return $route;
 	}
+
+	abstract function readRoute(string $step) : ?self;
 }
