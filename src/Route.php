@@ -2,10 +2,11 @@
 
 namespace Ertuo;
 
+use Ertuo\ExportInterface;
 use Ertuo\MethodTrait;
 use Ertuo\RouteAbstract;
 
-class Route extends RouteAbstract
+class Route extends RouteAbstract implements ExportInterface
 {
 	use MethodTrait;
 
@@ -87,6 +88,9 @@ class Route extends RouteAbstract
 		return null;
 	}
 
+	/**
+	* @see ExportInterface::toArray()
+	*/
 	function toArray() : array
 	{
 		$export = array(
