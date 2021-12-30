@@ -3,54 +3,18 @@
   array (
     'GET' => 
     array (
-      '/addon' => 
-      array (
-        '_route' => 'addon',
-      ),
-      '/addon/linkers' => 
-      array (
-        '_route' => 'addon_linkers',
-      ),
-      '/hook_events' => 
-      array (
-        '_route' => 'hook_events',
-      ),
-      '/repositories' => 
-      array (
-        '_route' => 'repositories',
-      ),
-      '/snippets' => 
-      array (
-        '_route' => 'snippets',
-      ),
-      '/teams' => 
-      array (
-        '_route' => 'teams',
-      ),
-      '/user' => 
-      array (
-        '_route' => 'user',
-      ),
-      '/user/emails' => 
-      array (
-        '_route' => 'user_emails',
-      ),
-      '/user/permissions/repositories' => 
-      array (
-        '_route' => 'user_permissions_repositories',
-      ),
-      '/user/permissions/teams' => 
-      array (
-        '_route' => 'user_permissions_teams',
-      ),
-      '/user/permissions/workspaces' => 
-      array (
-        '_route' => 'user_permissions_workspaces',
-      ),
-      '/workspaces' => 
-      array (
-        '_route' => 'workspaces',
-      ),
+      '/addon' => 'addon',
+      '/addon/linkers' => 'addon_linkers',
+      '/hook_events' => 'hook_events',
+      '/repositories' => 'repositories',
+      '/snippets' => 'snippets',
+      '/teams' => 'teams',
+      '/user' => 'user',
+      '/user/emails' => 'user_emails',
+      '/user/permissions/repositories' => 'user_permissions_repositories',
+      '/user/permissions/teams' => 'user_permissions_teams',
+      '/user/permissions/workspaces' => 'user_permissions_workspaces',
+      '/workspaces' => 'workspaces',
     ),
   ),
   1 => 
@@ -65,10 +29,7 @@
         array (
           '	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'addon_linkers_linker_key',
-            ),
+            0 => 'addon_linkers_linker_key',
             1 => 
             array (
               'linker_key' => 'linker_key',
@@ -76,10 +37,7 @@
           ),
           '		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'addon_linkers_linker_key_values',
-            ),
+            0 => 'addon_linkers_linker_key_values',
             1 => 
             array (
               'linker_key' => 'linker_key',
@@ -87,10 +45,7 @@
           ),
           '			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'addon_linkers_linker_key_values_value_id',
-            ),
+            0 => 'addon_linkers_linker_key_values_value_id',
             1 => 
             array (
               'linker_key' => 'linker_key',
@@ -99,10 +54,7 @@
           ),
           '				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'hook_events_subject_type',
-            ),
+            0 => 'hook_events_subject_type',
             1 => 
             array (
               'subject_type' => 'subject_type',
@@ -110,10 +62,7 @@
           ),
           '					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'pullrequests_selected_user',
-            ),
+            0 => 'pullrequests_selected_user',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -121,10 +70,7 @@
           ),
           '						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace',
-            ),
+            0 => 'repositories_workspace',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -132,10 +78,7 @@
           ),
           '							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug',
-            ),
+            0 => 'repositories_workspace_repo_slug',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -144,10 +87,7 @@
           ),
           '								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_branch_restrictions',
-            ),
+            0 => 'repositories_workspace_repo_slug_branch_restrictions',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -156,10 +96,7 @@
           ),
           '									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_branch_restrictions_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_branch_restrictions_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -169,10 +106,7 @@
           ),
           '										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_branching_model',
-            ),
+            0 => 'repositories_workspace_repo_slug_branching_model',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -181,10 +115,7 @@
           ),
           '											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_branching_model_settings',
-            ),
+            0 => 'repositories_workspace_repo_slug_branching_model_settings',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -193,10 +124,7 @@
           ),
           '												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -206,10 +134,7 @@
           ),
           '													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_approve',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_approve',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -219,10 +144,7 @@
           ),
           '														' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_comments',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_comments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -232,10 +154,7 @@
           ),
           '															' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_comments_comment_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_comments_comment_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -246,10 +165,7 @@
           ),
           '																' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_properties_app_key_property_name',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_properties_app_key_property_name',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -261,10 +177,7 @@
           ),
           '																	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_pullrequests',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_pullrequests',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -274,10 +187,7 @@
           ),
           '																		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_reports',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_reports',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -287,10 +197,7 @@
           ),
           '																			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_reports_reportId',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_reports_reportId',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -301,10 +208,7 @@
           ),
           '																				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_reports_reportId_annotations',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_reports_reportId_annotations',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -315,10 +219,7 @@
           ),
           '																					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_reports_reportId_annotations_annotationId',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_reports_reportId_annotations_annotationId',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -330,10 +231,7 @@
           ),
           '																						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_statuses',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_statuses',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -343,10 +241,7 @@
           ),
           '																							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_statuses_build',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_statuses_build',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -356,10 +251,7 @@
           ),
           '																								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commit_commit_statuses_build_key',
-            ),
+            0 => 'repositories_workspace_repo_slug_commit_commit_statuses_build_key',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -370,10 +262,7 @@
           ),
           '																									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commits',
-            ),
+            0 => 'repositories_workspace_repo_slug_commits',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -382,10 +271,7 @@
           ),
           '																										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_commits_revision',
-            ),
+            0 => 'repositories_workspace_repo_slug_commits_revision',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -395,10 +281,7 @@
           ),
           '																											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_components',
-            ),
+            0 => 'repositories_workspace_repo_slug_components',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -407,10 +290,7 @@
           ),
           '																												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_components_component_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_components_component_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -420,10 +300,7 @@
           ),
           '																													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_default_reviewers',
-            ),
+            0 => 'repositories_workspace_repo_slug_default_reviewers',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -440,10 +317,7 @@
         array (
           '	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_default_reviewers_target_username',
-            ),
+            0 => 'repositories_workspace_repo_slug_default_reviewers_target_username',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -453,10 +327,7 @@
           ),
           '		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_deploy_keys',
-            ),
+            0 => 'repositories_workspace_repo_slug_deploy_keys',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -465,10 +336,7 @@
           ),
           '			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_deploy_keys_key_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_deploy_keys_key_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -478,10 +346,7 @@
           ),
           '				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_deployments',
-            ),
+            0 => 'repositories_workspace_repo_slug_deployments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -490,10 +355,7 @@
           ),
           '					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_deployments_deployment_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_deployments_deployment_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -503,10 +365,7 @@
           ),
           '						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables',
-            ),
+            0 => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -516,10 +375,7 @@
           ),
           '							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables_variable_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables_variable_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -530,10 +386,7 @@
           ),
           '								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_diff_spec',
-            ),
+            0 => 'repositories_workspace_repo_slug_diff_spec',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -543,10 +396,7 @@
           ),
           '									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_diffstat_spec',
-            ),
+            0 => 'repositories_workspace_repo_slug_diffstat_spec',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -556,10 +406,7 @@
           ),
           '										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_downloads',
-            ),
+            0 => 'repositories_workspace_repo_slug_downloads',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -568,10 +415,7 @@
           ),
           '											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_downloads_filename',
-            ),
+            0 => 'repositories_workspace_repo_slug_downloads_filename',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -581,10 +425,7 @@
           ),
           '												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_environments',
-            ),
+            0 => 'repositories_workspace_repo_slug_environments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -593,10 +434,7 @@
           ),
           '													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_environments_environment_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_environments_environment_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -606,10 +444,7 @@
           ),
           '														' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_environments_environment_uuid_changes',
-            ),
+            0 => 'repositories_workspace_repo_slug_environments_environment_uuid_changes',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -619,10 +454,7 @@
           ),
           '															' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_filehistory_commit_path',
-            ),
+            0 => 'repositories_workspace_repo_slug_filehistory_commit_path',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -633,10 +465,7 @@
           ),
           '																' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_forks',
-            ),
+            0 => 'repositories_workspace_repo_slug_forks',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -645,10 +474,7 @@
           ),
           '																	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_hooks',
-            ),
+            0 => 'repositories_workspace_repo_slug_hooks',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -657,10 +483,7 @@
           ),
           '																		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_hooks_uid',
-            ),
+            0 => 'repositories_workspace_repo_slug_hooks_uid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -670,10 +493,7 @@
           ),
           '																			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -682,10 +502,7 @@
           ),
           '																				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_export',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_export',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -694,10 +511,7 @@
           ),
           '																					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_export_repo_name_issues_task_id_zip',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_export_repo_name_issues_task_id_zip',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -708,10 +522,7 @@
           ),
           '																						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_import',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_import',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -720,10 +531,7 @@
           ),
           '																							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -733,10 +541,7 @@
           ),
           '																								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_attachments',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_attachments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -746,10 +551,7 @@
           ),
           '																									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_attachments_path',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_attachments_path',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -760,10 +562,7 @@
           ),
           '																										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_changes',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_changes',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -773,10 +572,7 @@
           ),
           '																											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_changes_change_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_changes_change_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -787,10 +583,7 @@
           ),
           '																												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_comments',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_comments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -800,10 +593,7 @@
           ),
           '																													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_comments_comment_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_comments_comment_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -822,10 +612,7 @@
         array (
           '	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_vote',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_vote',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -835,10 +622,7 @@
           ),
           '		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_issues_issue_id_watch',
-            ),
+            0 => 'repositories_workspace_repo_slug_issues_issue_id_watch',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -848,10 +632,7 @@
           ),
           '			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_merge_base_revspec',
-            ),
+            0 => 'repositories_workspace_repo_slug_merge_base_revspec',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -861,10 +642,7 @@
           ),
           '				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_milestones',
-            ),
+            0 => 'repositories_workspace_repo_slug_milestones',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -873,10 +651,7 @@
           ),
           '					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_milestones_milestone_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_milestones_milestone_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -886,10 +661,7 @@
           ),
           '						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_patch_spec',
-            ),
+            0 => 'repositories_workspace_repo_slug_patch_spec',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -899,10 +671,7 @@
           ),
           '							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_caches',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_caches',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -911,10 +680,7 @@
           ),
           '								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -924,10 +690,7 @@
           ),
           '									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid_content_uri',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid_content_uri',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -937,10 +700,7 @@
           ),
           '										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -949,10 +709,7 @@
           ),
           '											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -962,10 +719,7 @@
           ),
           '												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -975,10 +729,7 @@
           ),
           '													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -989,10 +740,7 @@
           ),
           '														' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_log',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_log',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1003,10 +751,7 @@
           ),
           '															' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_logs_log_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_logs_log_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1018,10 +763,7 @@
           ),
           '																' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1032,10 +774,7 @@
           ),
           '																	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1046,10 +785,7 @@
           ),
           '																		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases_test_case_uuid_test_case_reasons',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases_test_case_uuid_test_case_reasons',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1061,10 +797,7 @@
           ),
           '																			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_stopPipeline',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_stopPipeline',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1074,10 +807,7 @@
           ),
           '																				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1086,10 +816,7 @@
           ),
           '																					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_build_number',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_build_number',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1098,10 +825,7 @@
           ),
           '																						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_schedules',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1110,10 +834,7 @@
           ),
           '																							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1123,10 +844,7 @@
           ),
           '																								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid_executions',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid_executions',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1136,10 +854,7 @@
           ),
           '																									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_ssh_key_pair',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_ssh_key_pair',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1148,10 +863,7 @@
           ),
           '																										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_ssh_known_hosts',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_ssh_known_hosts',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1160,10 +872,7 @@
           ),
           '																											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_ssh_known_hosts_known_host_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_ssh_known_hosts_known_host_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1173,10 +882,7 @@
           ),
           '																												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_variables',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_variables',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1185,10 +891,7 @@
           ),
           '																													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pipelines_config_variables_variable_uuid',
-            ),
+            0 => 'repositories_workspace_repo_slug_pipelines_config_variables_variable_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1206,10 +909,7 @@
         array (
           '	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_properties_app_key_property_name',
-            ),
+            0 => 'repositories_workspace_repo_slug_properties_app_key_property_name',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1220,10 +920,7 @@
           ),
           '		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1232,10 +929,7 @@
           ),
           '			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_activity',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_activity',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1244,10 +938,7 @@
           ),
           '				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1257,10 +948,7 @@
           ),
           '					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_activity',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_activity',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1270,10 +958,7 @@
           ),
           '						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_approve',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_approve',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1283,10 +968,7 @@
           ),
           '							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_comments',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_comments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1296,10 +978,7 @@
           ),
           '								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_comments_comment_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_comments_comment_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1310,10 +989,7 @@
           ),
           '									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_commits',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_commits',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1323,10 +999,7 @@
           ),
           '										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_decline',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_decline',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1336,10 +1009,7 @@
           ),
           '											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_diff',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_diff',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1349,10 +1019,7 @@
           ),
           '												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_diffstat',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_diffstat',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1362,10 +1029,7 @@
           ),
           '													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_merge',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_merge',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1375,10 +1039,7 @@
           ),
           '														' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_merge_task_status_task_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_merge_task_status_task_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1389,10 +1050,7 @@
           ),
           '															' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_patch',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_patch',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1402,10 +1060,7 @@
           ),
           '																' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_request_changes',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_request_changes',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1415,10 +1070,7 @@
           ),
           '																	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_statuses',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_statuses',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1428,10 +1080,7 @@
           ),
           '																		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties_app_key_property_name',
-            ),
+            0 => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties_app_key_property_name',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1443,10 +1092,7 @@
           ),
           '																			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_refs',
-            ),
+            0 => 'repositories_workspace_repo_slug_refs',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1455,10 +1101,7 @@
           ),
           '																				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_refs_branches',
-            ),
+            0 => 'repositories_workspace_repo_slug_refs_branches',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1467,10 +1110,7 @@
           ),
           '																					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_refs_branches_name',
-            ),
+            0 => 'repositories_workspace_repo_slug_refs_branches_name',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1480,10 +1120,7 @@
           ),
           '																						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_refs_tags',
-            ),
+            0 => 'repositories_workspace_repo_slug_refs_tags',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1492,10 +1129,7 @@
           ),
           '																							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_refs_tags_name',
-            ),
+            0 => 'repositories_workspace_repo_slug_refs_tags_name',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1505,10 +1139,7 @@
           ),
           '																								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_src',
-            ),
+            0 => 'repositories_workspace_repo_slug_src',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1517,10 +1148,7 @@
           ),
           '																									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_src_commit_path',
-            ),
+            0 => 'repositories_workspace_repo_slug_src_commit_path',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1531,10 +1159,7 @@
           ),
           '																										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_versions',
-            ),
+            0 => 'repositories_workspace_repo_slug_versions',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1543,10 +1168,7 @@
           ),
           '																											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_versions_version_id',
-            ),
+            0 => 'repositories_workspace_repo_slug_versions_version_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1556,10 +1178,7 @@
           ),
           '																												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'repositories_workspace_repo_slug_watchers',
-            ),
+            0 => 'repositories_workspace_repo_slug_watchers',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1568,10 +1187,7 @@
           ),
           '																													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace',
-            ),
+            0 => 'snippets_workspace',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1587,10 +1203,7 @@
         array (
           '	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id',
-            ),
+            0 => 'snippets_workspace_encoded_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1599,10 +1212,7 @@
           ),
           '		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_comments',
-            ),
+            0 => 'snippets_workspace_encoded_id_comments',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1611,10 +1221,7 @@
           ),
           '			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_comments_comment_id',
-            ),
+            0 => 'snippets_workspace_encoded_id_comments_comment_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1624,10 +1231,7 @@
           ),
           '				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_commits',
-            ),
+            0 => 'snippets_workspace_encoded_id_commits',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1636,10 +1240,7 @@
           ),
           '					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_commits_revision',
-            ),
+            0 => 'snippets_workspace_encoded_id_commits_revision',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1649,10 +1250,7 @@
           ),
           '						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_files_path',
-            ),
+            0 => 'snippets_workspace_encoded_id_files_path',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1662,10 +1260,7 @@
           ),
           '							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_watch',
-            ),
+            0 => 'snippets_workspace_encoded_id_watch',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1674,10 +1269,7 @@
           ),
           '								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_watchers',
-            ),
+            0 => 'snippets_workspace_encoded_id_watchers',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1686,10 +1278,7 @@
           ),
           '									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_node_id',
-            ),
+            0 => 'snippets_workspace_encoded_id_node_id',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1699,10 +1288,7 @@
           ),
           '										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_node_id_files_path',
-            ),
+            0 => 'snippets_workspace_encoded_id_node_id_files_path',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1713,10 +1299,7 @@
           ),
           '											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_revision_diff',
-            ),
+            0 => 'snippets_workspace_encoded_id_revision_diff',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1726,10 +1309,7 @@
           ),
           '												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'snippets_workspace_encoded_id_revision_patch',
-            ),
+            0 => 'snippets_workspace_encoded_id_revision_patch',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1739,10 +1319,7 @@
           ),
           '													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username',
-            ),
+            0 => 'teams_username',
             1 => 
             array (
               'username' => 'username',
@@ -1750,10 +1327,7 @@
           ),
           '														' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_followers',
-            ),
+            0 => 'teams_username_followers',
             1 => 
             array (
               'username' => 'username',
@@ -1761,10 +1335,7 @@
           ),
           '															' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_following',
-            ),
+            0 => 'teams_username_following',
             1 => 
             array (
               'username' => 'username',
@@ -1772,10 +1343,7 @@
           ),
           '																' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_hooks',
-            ),
+            0 => 'teams_username_hooks',
             1 => 
             array (
               'username' => 'username',
@@ -1783,10 +1351,7 @@
           ),
           '																	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_hooks_uid',
-            ),
+            0 => 'teams_username_hooks_uid',
             1 => 
             array (
               'username' => 'username',
@@ -1795,10 +1360,7 @@
           ),
           '																		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_members',
-            ),
+            0 => 'teams_username_members',
             1 => 
             array (
               'username' => 'username',
@@ -1806,10 +1368,7 @@
           ),
           '																			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_permissions',
-            ),
+            0 => 'teams_username_permissions',
             1 => 
             array (
               'username' => 'username',
@@ -1817,10 +1376,7 @@
           ),
           '																				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_permissions_repositories',
-            ),
+            0 => 'teams_username_permissions_repositories',
             1 => 
             array (
               'username' => 'username',
@@ -1828,10 +1384,7 @@
           ),
           '																					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_permissions_repositories_repo_slug',
-            ),
+            0 => 'teams_username_permissions_repositories_repo_slug',
             1 => 
             array (
               'username' => 'username',
@@ -1840,10 +1393,7 @@
           ),
           '																						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_pipelines_config_variables',
-            ),
+            0 => 'teams_username_pipelines_config_variables',
             1 => 
             array (
               'username' => 'username',
@@ -1851,10 +1401,7 @@
           ),
           '																							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_pipelines_config_variables_variable_uuid',
-            ),
+            0 => 'teams_username_pipelines_config_variables_variable_uuid',
             1 => 
             array (
               'username' => 'username',
@@ -1863,10 +1410,7 @@
           ),
           '																								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_projects',
-            ),
+            0 => 'teams_username_projects',
             1 => 
             array (
               'username' => 'username',
@@ -1874,10 +1418,7 @@
           ),
           '																									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_projects_project_key',
-            ),
+            0 => 'teams_username_projects_project_key',
             1 => 
             array (
               'username' => 'username',
@@ -1886,10 +1427,7 @@
           ),
           '																										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_username_search_code',
-            ),
+            0 => 'teams_username_search_code',
             1 => 
             array (
               'username' => 'username',
@@ -1897,10 +1435,7 @@
           ),
           '																											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'teams_workspace_repositories',
-            ),
+            0 => 'teams_workspace_repositories',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -1908,10 +1443,7 @@
           ),
           '																												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'user_emails_email',
-            ),
+            0 => 'user_emails_email',
             1 => 
             array (
               'email' => 'email',
@@ -1919,10 +1451,7 @@
           ),
           '																													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user',
-            ),
+            0 => 'users_selected_user',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -1938,10 +1467,7 @@
         array (
           '	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_hooks',
-            ),
+            0 => 'users_selected_user_hooks',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -1949,10 +1475,7 @@
           ),
           '		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_hooks_uid',
-            ),
+            0 => 'users_selected_user_hooks_uid',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -1961,10 +1484,7 @@
           ),
           '			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_pipelines_config_variables',
-            ),
+            0 => 'users_selected_user_pipelines_config_variables',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -1972,10 +1492,7 @@
           ),
           '				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_pipelines_config_variables_variable_uuid',
-            ),
+            0 => 'users_selected_user_pipelines_config_variables_variable_uuid',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -1984,10 +1501,7 @@
           ),
           '					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_properties_app_key_property_name',
-            ),
+            0 => 'users_selected_user_properties_app_key_property_name',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -1997,10 +1511,7 @@
           ),
           '						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_search_code',
-            ),
+            0 => 'users_selected_user_search_code',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -2008,10 +1519,7 @@
           ),
           '							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_ssh_keys',
-            ),
+            0 => 'users_selected_user_ssh_keys',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -2019,10 +1527,7 @@
           ),
           '								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_selected_user_ssh_keys_key_id',
-            ),
+            0 => 'users_selected_user_ssh_keys_key_id',
             1 => 
             array (
               'selected_user' => 'selected_user',
@@ -2031,10 +1536,7 @@
           ),
           '									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_username_members',
-            ),
+            0 => 'users_username_members',
             1 => 
             array (
               'username' => 'username',
@@ -2042,10 +1544,7 @@
           ),
           '										' => 
           array (
-            0 => 
-            array (
-              '_route' => 'users_workspace_repositories',
-            ),
+            0 => 'users_workspace_repositories',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2053,10 +1552,7 @@
           ),
           '											' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace',
-            ),
+            0 => 'workspaces_workspace',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2064,10 +1560,7 @@
           ),
           '												' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_hooks',
-            ),
+            0 => 'workspaces_workspace_hooks',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2075,10 +1568,7 @@
           ),
           '													' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_hooks_uid',
-            ),
+            0 => 'workspaces_workspace_hooks_uid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2087,10 +1577,7 @@
           ),
           '														' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_members',
-            ),
+            0 => 'workspaces_workspace_members',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2098,10 +1585,7 @@
           ),
           '															' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_members_member',
-            ),
+            0 => 'workspaces_workspace_members_member',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2110,10 +1594,7 @@
           ),
           '																' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_permissions',
-            ),
+            0 => 'workspaces_workspace_permissions',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2121,10 +1602,7 @@
           ),
           '																	' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_permissions_repositories',
-            ),
+            0 => 'workspaces_workspace_permissions_repositories',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2132,10 +1610,7 @@
           ),
           '																		' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_permissions_repositories_repo_slug',
-            ),
+            0 => 'workspaces_workspace_permissions_repositories_repo_slug',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2144,10 +1619,7 @@
           ),
           '																			' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_pipelines_config_identity_oidc_well_known_openid_configuration',
-            ),
+            0 => 'workspaces_workspace_pipelines_config_identity_oidc_well_known_openid_configuration',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2155,10 +1627,7 @@
           ),
           '																				' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_pipelines_config_identity_oidc_keys_json',
-            ),
+            0 => 'workspaces_workspace_pipelines_config_identity_oidc_keys_json',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2166,10 +1635,7 @@
           ),
           '																					' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_pipelines_config_variables',
-            ),
+            0 => 'workspaces_workspace_pipelines_config_variables',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2177,10 +1643,7 @@
           ),
           '																						' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_pipelines_config_variables_variable_uuid',
-            ),
+            0 => 'workspaces_workspace_pipelines_config_variables_variable_uuid',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2189,10 +1652,7 @@
           ),
           '																							' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_projects',
-            ),
+            0 => 'workspaces_workspace_projects',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2200,10 +1660,7 @@
           ),
           '																								' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_projects_project_key',
-            ),
+            0 => 'workspaces_workspace_projects_project_key',
             1 => 
             array (
               'workspace' => 'workspace',
@@ -2212,10 +1669,7 @@
           ),
           '																									' => 
           array (
-            0 => 
-            array (
-              '_route' => 'workspaces_workspace_search_code',
-            ),
+            0 => 'workspaces_workspace_search_code',
             1 => 
             array (
               'workspace' => 'workspace',

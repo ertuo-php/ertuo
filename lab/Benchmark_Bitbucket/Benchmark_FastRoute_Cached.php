@@ -39,6 +39,6 @@ abstract class Benchmark_FastRoute_Cached extends Benchmark_FastRoute
 	{
 		$dispatcher = $this->setupRouting();
 
-		return $dispatcher->dispatch('GET', $route)[1];
+		return array('_route' => $dispatcher->dispatch('GET', $route)[1]);
 	}
 }

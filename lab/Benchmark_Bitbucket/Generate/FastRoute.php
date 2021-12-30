@@ -43,7 +43,7 @@ class FastRoute
 			$name = trim($name, '_');
 
 			$php .= static::TAB . static::TAB
-				. "\$routes->addRoute('GET', '{$route}', ['_route' => '{$name}']);"
+				. "\$routes->addRoute('GET', '{$route}', '{$name}');"
 				. "\n";
 		}
 
