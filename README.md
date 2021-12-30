@@ -461,6 +461,8 @@ generators.
 The generated code for the route tree looks something like this:
 
 ```
+<?php
+
 use Ertuo\Route;
 
 return $routes = Route::add('_app', [])
