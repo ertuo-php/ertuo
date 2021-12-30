@@ -329,8 +329,8 @@ route (the one identified with an empty string) will never be invoked.
 ### Rule Aggregate
 
 During the routing process, the routes will reference different rules. These
-are read from a collection of rules that passed to the dispatcher object. Its
-purpose is to allow for more rule re-use as there will be only a few that are
+are read from a collection of rules that is passed to the dispatcher object. Its
+purpose is to allow for more rules re-use as there will be only a few that are
 used in each routing.   
 
 You can read the current rule aggregate from the dispatcher using
@@ -354,7 +354,7 @@ $arg->lazy('uuid', fn() => new UUIDRule());
 
 ### Alias Rules
 
-There are situations in which it is helpful to add an alias to an existing rule
+There are situations when it is helpful to add an alias to an existing rule
 and bundle with some specific options. Here is an example of how to do this by
 creating a `"locale"` alias rule that is actually `"enum"` rule with specific
 options
@@ -371,10 +371,11 @@ yield 'locale' => Route::add('_locale')->rule('locale') ...
 
 ### Composite Rules
 
-Similar to alias rules, there are situations in which you need a route rule to
+Similar to alias rules, there are situations when you need a route rule to
 be able to do several different checks. You can achieve this with a composite
-rule. It is simply a list of rules that will be called consecutively until either
-there is a value accepted, or when the list of composite rules is depleted
+rule. It is simply a list of rules that will be called consecutively until
+either the value of the current step is accepted, or when the list of composite
+rules is depleted.
 
 ```php
 // create a composite rule from "id" and "any" rules
@@ -390,7 +391,7 @@ $agg->lazy('blog_post',
 
 You are not limited to the available rules. You can create your own using the
 `RuleInterface` interface, and using your own logic inside it. The one important
-rule to follow is to only work with non-empty steps.
+restriction to follow is to only work with non-empty steps.
 
 ```php
 use Ertuo\Result;
@@ -411,9 +412,16 @@ whether some details have already been collected in the result or not.
 
 # Export
 
-You can dump of all of the routes as array using `Route::toArray()`. For
-now I've used this for a benchmark comparing reading from a completely built-tree
-vs. progressively exploring the tree at runtime (runtime is faster).
+You can dump of all of the routes as array using `Route::toArray()`. This is
+helpful in situations when you need to work with the whole complete set of routes.
+
+This is used internally by the "builders". You can read more about them in the section below.
+
+One exotic thing I used `Route::toArray()` for is a benchmark comparing reading
+from a completely unfolded tree vs. progressively exploring the tree at runtime.
+As you might have guessed it, runtime is faster. This was again to prove the
+point that routes declaration eats up a lot of time in advance of the actual
+routing process.
 
 # Builders
 
