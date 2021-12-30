@@ -5,6 +5,10 @@ and faster than conventional regular expression based routers.
 
 [This article explains how the implementation works and why it is fast.](http://kaloyan.info/writing/2021/12/22/ertuo-php-routing.html "Ertuo, allegedly the fastest PHP routing library")
 
+**Ertuo is 10x to 22x faster** than Symfony Compiled routes, and FastRoute
+Cached MarkBased Strategy. Explore the [benchmark results](#benchmark-results)
+for more details.
+
 # Getting Started
 ```
 composer require ertuo-php/router
@@ -621,15 +625,15 @@ php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_Cached_GroupPosBased.p
 php vendor/bin/phpbench run Benchmark_Bitbucket_FastRoute_Cached_MarkBased.php --report=short
 ```
 
-### Benchmark Results
-
 To compare results run the two Ertuo benchmarks, one using generators to declare the routes, and another one using just plain arrays.
 ```
 php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Generator.php --report=short
 php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=short
 ```
 
-The benchmarks show Ertuo is 10x to 22x faster. I am comparing it to the best of
+### Benchmark Results
+
+**The benchmarks show Ertuo is 10x to 22x faster**. I am comparing it to the best of
 both breeds: Symfony Compiled routes and FastRoute Cached MarkBased strategy.
 
 You can see the results in the logs of the Github ["benchmark.yml"](https://github.com/ertuo-php/ertuo/actions/workflows/benchmark.yml) action as well.
