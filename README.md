@@ -224,7 +224,8 @@ yield 'locale' => Route::add('_locale')->default('en', ['has_locale' => false])
 ### Route Methods
 
 The `Route` class has shortcut methods for all of the HTTP methods. Use
-them if you want to attach handlers for specific methods on a route.
+them if you want to attach handlers (aka controllers, actions) for specific
+methods on a route.
 
 ```php
 yield '' => Route::add()
@@ -233,13 +234,18 @@ yield '' => Route::add()
 ```
 
 These shortcut methods will store these handlers inside the route attributes using
-a predefined key map. Using the key map you can then read the handler from the
-result attributes.
+a predefined key map. By default the keys are with `_request_method_` prefix,
+like `_request_method_get` for `GET` method. Please try to be careful not to
+overwrite these with some of your own attributes.
+
+You can get the handler/controller/action from the result, call `$result->handler()`:
 
 ```php
-$method = strtolower($_SERVER['REQUEST_METHOD'] ?? '');
-$handler = $result->attributes[ "_request_method_{$method}" ] ?? null;
+$handler = $result->handler( $_SERVER['REQUEST_METHOD'] );
 ```
+
+You can also get the list of allowed HTTP methods associated with a result by
+calling `$result->allowedMethods()`.
 
 # Dispatching
 
