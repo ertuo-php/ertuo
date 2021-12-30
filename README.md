@@ -308,13 +308,13 @@ them declared in the default aggregate `Rule\DefaultAggregate`.
 	the source array is depleted or some specific value is met
 * `"range"` will accept values within a range
 
-### Default Rule
+### Direct Rule
 
 You can leave the rule of a route empty. This happens if you do not explicitly
 declare what rule a route should use. In this case the dispatcher does not call
-any thing from the rule aggregate. Instead it uses the current step to identify
+anything from the rule aggregate. Instead it uses the current step to identify
 what is the next route. This only happens with non-empty steps, and the default
-route will never be invoked.
+route (the one identified with an empty string) will never be invoked.
 
 ### Rule Aggregate
 
