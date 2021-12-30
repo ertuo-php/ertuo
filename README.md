@@ -6,7 +6,7 @@ and faster than conventional regular expression based routers.
 [This article explains how the implementation works and why it is fast.](http://kaloyan.info/writing/2021/12/22/ertuo-php-routing.html "Ertuo, allegedly the fastest PHP routing library")
 
 **Ertuo is 10x to 22x faster** than Symfony Compiled routes, and FastRoute
-Cached MarkBased Strategy. Explore the [benchmark results](#benchmark-results)
+Cached MarkBased strategy. Explore the [benchmark results](#benchmark-results)
 for more details.
 
 # Getting Started
