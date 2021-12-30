@@ -638,7 +638,7 @@ both breeds: Symfony Compiled routes and FastRoute Cached MarkBased strategy.
 
 You can see the results in the logs of the Github ["benchmark.yml"](https://github.com/ertuo-php/ertuo/actions/workflows/benchmark.yml) action as well.
 
-#### PHP7.4
+#### PHP 7.4
 
 ```
 Benchmark_Bitbucket_Ertuo_Array
@@ -672,7 +672,7 @@ Benchmark_Bitbucket_Symfony_Compiled
 +--------------+-----------+-----------+-----------+-----------+----------+--------+
 ```
 
-#### PHP8.0
+#### PHP 8.0
 
 ```
 Benchmark_Bitbucket_Ertuo_Array
