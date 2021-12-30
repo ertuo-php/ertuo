@@ -1,5 +1,5 @@
 <?php return array (
-  'name' => '',
+  'key' => '',
   'attributes' => 
   array (
   ),
@@ -24,7 +24,7 @@
   array (
     'addon' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'addon',
@@ -50,7 +50,7 @@
       array (
         'linkers' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
             '_route' => 'addon_linkers',
@@ -77,7 +77,7 @@
           array (
             '' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
               ),
@@ -102,7 +102,7 @@
               array (
                 'values' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'addon_linkers_linker_key_values',
@@ -137,7 +137,7 @@
     ),
     'hook_events' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'hook_events',
@@ -166,7 +166,7 @@
     ),
     'pullrequests' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'pullrequests',
@@ -195,7 +195,7 @@
     ),
     'repositories' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'repositories',
@@ -222,7 +222,7 @@
       array (
         '' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
           ),
@@ -248,7 +248,7 @@
           array (
             '' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
               ),
@@ -273,7 +273,7 @@
               array (
                 'branch-restrictions' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_branch_restrictions',
@@ -302,7 +302,7 @@
                 ),
                 'branching-model' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_branching_model',
@@ -328,7 +328,7 @@
                   array (
                     'settings' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_branching_model_settings',
@@ -358,7 +358,7 @@
                 ),
                 'commit' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_commit',
@@ -385,7 +385,7 @@
                   array (
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -410,7 +410,7 @@
                       array (
                         'approve' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_commit_commit_approve',
@@ -438,7 +438,7 @@
                         ),
                         'comments' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_commit_commit_comments',
@@ -467,7 +467,7 @@
                         ),
                         'properties' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_commit_commit_properties',
@@ -494,7 +494,7 @@
                           array (
                             '' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                               ),
@@ -524,7 +524,7 @@
                         ),
                         'pullrequests' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_commit_commit_pullrequests',
@@ -552,7 +552,7 @@
                         ),
                         'reports' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_commit_commit_reports',
@@ -579,7 +579,7 @@
                           array (
                             '' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                               ),
@@ -604,7 +604,7 @@
                               array (
                                 'annotations' => 
                                 array (
-                                  'name' => '',
+                                  'key' => '',
                                   'attributes' => 
                                   array (
                                     '_route' => 'repositories_workspace_repo_slug_commit_commit_reports_reportId_annotations',
@@ -637,7 +637,7 @@
                         ),
                         'statuses' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_commit_commit_statuses',
@@ -663,7 +663,7 @@
                           array (
                             'build' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                                 '_route' => 'repositories_workspace_repo_slug_commit_commit_statuses_build',
@@ -698,7 +698,7 @@
                 ),
                 'commits' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_commits',
@@ -727,7 +727,7 @@
                 ),
                 'components' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_components',
@@ -756,7 +756,7 @@
                 ),
                 'default-reviewers' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_default_reviewers',
@@ -785,7 +785,7 @@
                 ),
                 'deploy-keys' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_deploy_keys',
@@ -814,7 +814,7 @@
                 ),
                 'deployments' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_deployments',
@@ -843,7 +843,7 @@
                 ),
                 'deployments_config' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_deployments_config',
@@ -869,7 +869,7 @@
                   array (
                     'environments' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_deployments_config_environments',
@@ -896,7 +896,7 @@
                       array (
                         '' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                           ),
@@ -921,7 +921,7 @@
                           array (
                             'variables' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                                 '_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables',
@@ -956,7 +956,7 @@
                 ),
                 'diff' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_diff',
@@ -985,7 +985,7 @@
                 ),
                 'diffstat' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_diffstat',
@@ -1014,7 +1014,7 @@
                 ),
                 'downloads' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_downloads',
@@ -1043,7 +1043,7 @@
                 ),
                 'environments' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_environments',
@@ -1070,7 +1070,7 @@
                   array (
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -1095,7 +1095,7 @@
                       array (
                         'changes' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_environments_environment_uuid_changes',
@@ -1127,7 +1127,7 @@
                 ),
                 'filehistory' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_filehistory',
@@ -1154,7 +1154,7 @@
                   array (
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -1184,7 +1184,7 @@
                 ),
                 'forks' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_forks',
@@ -1212,7 +1212,7 @@
                 ),
                 'hooks' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_hooks',
@@ -1241,7 +1241,7 @@
                 ),
                 'issues' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_issues',
@@ -1268,7 +1268,7 @@
                   array (
                     'export' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_issues_export',
@@ -1297,7 +1297,7 @@
                     ),
                     'import' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_issues_import',
@@ -1325,7 +1325,7 @@
                     ),
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -1350,7 +1350,7 @@
                       array (
                         'attachments' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_issues_issue_id_attachments',
@@ -1379,7 +1379,7 @@
                         ),
                         'changes' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_issues_issue_id_changes',
@@ -1408,7 +1408,7 @@
                         ),
                         'comments' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_issues_issue_id_comments',
@@ -1437,7 +1437,7 @@
                         ),
                         'vote' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_issues_issue_id_vote',
@@ -1465,7 +1465,7 @@
                         ),
                         'watch' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_issues_issue_id_watch',
@@ -1497,7 +1497,7 @@
                 ),
                 'merge-base' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_merge_base',
@@ -1526,7 +1526,7 @@
                 ),
                 'milestones' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_milestones',
@@ -1555,7 +1555,7 @@
                 ),
                 'patch' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_patch',
@@ -1584,7 +1584,7 @@
                 ),
                 'pipelines-config' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_pipelines_config',
@@ -1610,7 +1610,7 @@
                   array (
                     'caches' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_pipelines_config_caches',
@@ -1637,7 +1637,7 @@
                       array (
                         '' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                           ),
@@ -1662,7 +1662,7 @@
                           array (
                             'content-uri' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                                 '_route' => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid_content_uri',
@@ -1696,7 +1696,7 @@
                 ),
                 'pipelines' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_pipelines',
@@ -1723,7 +1723,7 @@
                   array (
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -1748,7 +1748,7 @@
                       array (
                         'steps' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps',
@@ -1775,7 +1775,7 @@
                           array (
                             '' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                               ),
@@ -1800,7 +1800,7 @@
                               array (
                                 'log' => 
                                 array (
-                                  'name' => '',
+                                  'key' => '',
                                   'attributes' => 
                                   array (
                                     '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_log',
@@ -1828,7 +1828,7 @@
                                 ),
                                 'logs' => 
                                 array (
-                                  'name' => '',
+                                  'key' => '',
                                   'attributes' => 
                                   array (
                                     '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_logs',
@@ -1857,7 +1857,7 @@
                                 ),
                                 'test_reports' => 
                                 array (
-                                  'name' => '',
+                                  'key' => '',
                                   'attributes' => 
                                   array (
                                     '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports',
@@ -1883,7 +1883,7 @@
                                   array (
                                     'test_cases' => 
                                     array (
-                                      'name' => '',
+                                      'key' => '',
                                       'attributes' => 
                                       array (
                                         '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases',
@@ -1910,7 +1910,7 @@
                                       array (
                                         '' => 
                                         array (
-                                          'name' => '',
+                                          'key' => '',
                                           'attributes' => 
                                           array (
                                           ),
@@ -1935,7 +1935,7 @@
                                           array (
                                             'test_case_reasons' => 
                                             array (
-                                              'name' => '',
+                                              'key' => '',
                                               'attributes' => 
                                               array (
                                                 '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases_test_case_uuid_test_case_reasons',
@@ -1973,7 +1973,7 @@
                         ),
                         'stopPipeline' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_stopPipeline',
@@ -2005,7 +2005,7 @@
                 ),
                 'pipelines_config' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_pipelines_config',
@@ -2031,7 +2031,7 @@
                   array (
                     'build_number' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_pipelines_config_build_number',
@@ -2059,7 +2059,7 @@
                     ),
                     'schedules' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules',
@@ -2086,7 +2086,7 @@
                       array (
                         '' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                           ),
@@ -2111,7 +2111,7 @@
                           array (
                             'executions' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                                 '_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid_executions',
@@ -2143,7 +2143,7 @@
                     ),
                     'ssh' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_pipelines_config_ssh',
@@ -2169,7 +2169,7 @@
                       array (
                         'key_pair' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pipelines_config_ssh_key_pair',
@@ -2197,7 +2197,7 @@
                         ),
                         'known_hosts' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pipelines_config_ssh_known_hosts',
@@ -2228,7 +2228,7 @@
                     ),
                     'variables' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_pipelines_config_variables',
@@ -2259,7 +2259,7 @@
                 ),
                 'properties' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_properties',
@@ -2286,7 +2286,7 @@
                   array (
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -2316,7 +2316,7 @@
                 ),
                 'pullrequests' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_pullrequests',
@@ -2343,7 +2343,7 @@
                   array (
                     'activity' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_pullrequests_activity',
@@ -2371,7 +2371,7 @@
                     ),
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -2396,7 +2396,7 @@
                       array (
                         'activity' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_activity',
@@ -2424,7 +2424,7 @@
                         ),
                         'approve' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_approve',
@@ -2452,7 +2452,7 @@
                         ),
                         'comments' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_comments',
@@ -2481,7 +2481,7 @@
                         ),
                         'commits' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_commits',
@@ -2509,7 +2509,7 @@
                         ),
                         'decline' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_decline',
@@ -2537,7 +2537,7 @@
                         ),
                         'diff' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_diff',
@@ -2565,7 +2565,7 @@
                         ),
                         'diffstat' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_diffstat',
@@ -2593,7 +2593,7 @@
                         ),
                         'merge' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_merge',
@@ -2619,7 +2619,7 @@
                           array (
                             'task-status' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                                 '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_merge_task_status',
@@ -2650,7 +2650,7 @@
                         ),
                         'patch' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_patch',
@@ -2678,7 +2678,7 @@
                         ),
                         'request-changes' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_request_changes',
@@ -2706,7 +2706,7 @@
                         ),
                         'statuses' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_statuses',
@@ -2734,7 +2734,7 @@
                         ),
                         'properties' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties',
@@ -2761,7 +2761,7 @@
                           array (
                             '' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                               ),
@@ -2795,7 +2795,7 @@
                 ),
                 'refs' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_refs',
@@ -2821,7 +2821,7 @@
                   array (
                     'branches' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_refs_branches',
@@ -2850,7 +2850,7 @@
                     ),
                     'tags' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'repositories_workspace_repo_slug_refs_tags',
@@ -2881,7 +2881,7 @@
                 ),
                 'src' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_src',
@@ -2908,7 +2908,7 @@
                   array (
                     '' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                       ),
@@ -2938,7 +2938,7 @@
                 ),
                 'versions' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_versions',
@@ -2967,7 +2967,7 @@
                 ),
                 'watchers' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'repositories_workspace_repo_slug_watchers',
@@ -3001,7 +3001,7 @@
     ),
     'snippets' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'snippets',
@@ -3028,7 +3028,7 @@
       array (
         '' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
           ),
@@ -3054,7 +3054,7 @@
           array (
             '' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
               ),
@@ -3080,7 +3080,7 @@
               array (
                 'comments' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'snippets_workspace_encoded_id_comments',
@@ -3109,7 +3109,7 @@
                 ),
                 'commits' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'snippets_workspace_encoded_id_commits',
@@ -3138,7 +3138,7 @@
                 ),
                 'files' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'snippets_workspace_encoded_id_files',
@@ -3167,7 +3167,7 @@
                 ),
                 'watch' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'snippets_workspace_encoded_id_watch',
@@ -3195,7 +3195,7 @@
                 ),
                 'watchers' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'snippets_workspace_encoded_id_watchers',
@@ -3223,7 +3223,7 @@
                 ),
                 '' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                   ),
@@ -3248,7 +3248,7 @@
                   array (
                     'files' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'snippets_workspace_encoded_id_node_id_files',
@@ -3277,7 +3277,7 @@
                     ),
                     'diff' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'snippets_workspace_encoded_id_revision_diff',
@@ -3305,7 +3305,7 @@
                     ),
                     'patch' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'snippets_workspace_encoded_id_revision_patch',
@@ -3341,7 +3341,7 @@
     ),
     'teams' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'teams',
@@ -3368,7 +3368,7 @@
       array (
         '' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
           ),
@@ -3393,7 +3393,7 @@
           array (
             'followers' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_followers',
@@ -3421,7 +3421,7 @@
             ),
             'following' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_following',
@@ -3449,7 +3449,7 @@
             ),
             'hooks' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_hooks',
@@ -3478,7 +3478,7 @@
             ),
             'members' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_members',
@@ -3506,7 +3506,7 @@
             ),
             'permissions' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_permissions',
@@ -3532,7 +3532,7 @@
               array (
                 'repositories' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'teams_username_permissions_repositories',
@@ -3563,7 +3563,7 @@
             ),
             'pipelines_config' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_pipelines_config',
@@ -3589,7 +3589,7 @@
               array (
                 'variables' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'teams_username_pipelines_config_variables',
@@ -3620,7 +3620,7 @@
             ),
             'projects' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_projects',
@@ -3649,7 +3649,7 @@
             ),
             'search' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_username_search',
@@ -3675,7 +3675,7 @@
               array (
                 'code' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'teams_username_search_code',
@@ -3705,7 +3705,7 @@
             ),
             'repositories' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'teams_workspace_repositories',
@@ -3737,7 +3737,7 @@
     ),
     'user' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'user',
@@ -3763,7 +3763,7 @@
       array (
         'emails' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
             '_route' => 'user_emails',
@@ -3792,7 +3792,7 @@
         ),
         'permissions' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
             '_route' => 'user_permissions',
@@ -3818,7 +3818,7 @@
           array (
             'repositories' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'user_permissions_repositories',
@@ -3846,7 +3846,7 @@
             ),
             'teams' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'user_permissions_teams',
@@ -3874,7 +3874,7 @@
             ),
             'workspaces' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'user_permissions_workspaces',
@@ -3906,7 +3906,7 @@
     ),
     'users' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'users',
@@ -3933,7 +3933,7 @@
       array (
         '' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
           ),
@@ -3958,7 +3958,7 @@
           array (
             'hooks' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_selected_user_hooks',
@@ -3987,7 +3987,7 @@
             ),
             'pipelines_config' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_selected_user_pipelines_config',
@@ -4013,7 +4013,7 @@
               array (
                 'variables' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'users_selected_user_pipelines_config_variables',
@@ -4044,7 +4044,7 @@
             ),
             'properties' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_selected_user_properties',
@@ -4071,7 +4071,7 @@
               array (
                 '' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                   ),
@@ -4101,7 +4101,7 @@
             ),
             'search' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_selected_user_search',
@@ -4127,7 +4127,7 @@
               array (
                 'code' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'users_selected_user_search_code',
@@ -4157,7 +4157,7 @@
             ),
             'ssh-keys' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_selected_user_ssh_keys',
@@ -4186,7 +4186,7 @@
             ),
             'members' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_username_members',
@@ -4214,7 +4214,7 @@
             ),
             'repositories' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'users_workspace_repositories',
@@ -4246,7 +4246,7 @@
     ),
     'workspaces' => 
     array (
-      'name' => '',
+      'key' => '',
       'attributes' => 
       array (
         '_route' => 'workspaces',
@@ -4273,7 +4273,7 @@
       array (
         '' => 
         array (
-          'name' => '',
+          'key' => '',
           'attributes' => 
           array (
           ),
@@ -4298,7 +4298,7 @@
           array (
             'hooks' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'workspaces_workspace_hooks',
@@ -4327,7 +4327,7 @@
             ),
             'members' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'workspaces_workspace_members',
@@ -4356,7 +4356,7 @@
             ),
             'permissions' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'workspaces_workspace_permissions',
@@ -4382,7 +4382,7 @@
               array (
                 'repositories' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'workspaces_workspace_permissions_repositories',
@@ -4413,7 +4413,7 @@
             ),
             'pipelines-config' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'workspaces_workspace_pipelines_config',
@@ -4439,7 +4439,7 @@
               array (
                 'identity' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'workspaces_workspace_pipelines_config_identity',
@@ -4465,7 +4465,7 @@
                   array (
                     'oidc' => 
                     array (
-                      'name' => '',
+                      'key' => '',
                       'attributes' => 
                       array (
                         '_route' => 'workspaces_workspace_pipelines_config_identity_oidc',
@@ -4492,7 +4492,7 @@
                       array (
                         'keys.json' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                             '_route' => 'workspaces_workspace_pipelines_config_identity_oidc_keys_json',
@@ -4520,7 +4520,7 @@
                         ),
                         '' => 
                         array (
-                          'name' => '',
+                          'key' => '',
                           'attributes' => 
                           array (
                           ),
@@ -4545,7 +4545,7 @@
                           array (
                             'openid-configuration' => 
                             array (
-                              'name' => '',
+                              'key' => '',
                               'attributes' => 
                               array (
                                 '_route' => 'workspaces_workspace_pipelines_config_identity_oidc_well_known_openid_configuration',
@@ -4579,7 +4579,7 @@
                 ),
                 'variables' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'workspaces_workspace_pipelines_config_variables',
@@ -4610,7 +4610,7 @@
             ),
             'projects' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'workspaces_workspace_projects',
@@ -4639,7 +4639,7 @@
             ),
             'search' => 
             array (
-              'name' => '',
+              'key' => '',
               'attributes' => 
               array (
                 '_route' => 'workspaces_workspace_search',
@@ -4665,7 +4665,7 @@
               array (
                 'code' => 
                 array (
-                  'name' => '',
+                  'key' => '',
                   'attributes' => 
                   array (
                     '_route' => 'workspaces_workspace_search_code',

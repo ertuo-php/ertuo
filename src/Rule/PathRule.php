@@ -24,11 +24,11 @@ class PathRule implements RuleInterface, CanHandleInterface, RouteAwareInterface
 	{
 		$route = $this->getRoute();
 
-		if ($step && $route->name)
+		if ($step && $route->key)
 		{
-			if (($current == $step) || empty($result->attributes[ $route->name ]))
+			if (($current == $step) || empty($result->attributes[ $route->key ]))
 			{
-				$result->attributes[ $route->name ][] = $step;
+				$result->attributes[ $route->key ][] = $step;
 			}
 		}
 

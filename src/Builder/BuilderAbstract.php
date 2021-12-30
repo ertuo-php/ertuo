@@ -34,12 +34,12 @@ abstract class BuilderAbstract implements BuilderInterface
 
 	protected function buildRoute(array $tree, string $offset) : string
 	{
-		$name = $tree[ 'name' ] ?? '';
+		$key = $tree[ 'key' ] ?? '';
 
 		$attributes = $tree[ 'attributes' ] ?? [];
 		$php_attr = $this->buildArrayArgument( $attributes );
 
-		$php = "Route::add('{$name}', {$php_attr})";
+		$php = "Route::add('{$key}', {$php_attr})";
 
 		$rule = false;
 		if (!empty($tree[ 'rule' ]))

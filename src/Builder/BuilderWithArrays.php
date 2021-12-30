@@ -22,10 +22,10 @@ class BuilderWithArrays extends BuilderAbstract
 			. $offset . $this->tab . "return array(\n";
 
 		$next = $offset . $this->tab . $this->tab;
-		foreach ($routes as $name => $route)
+		foreach ($routes as $key => $route)
 		{
 			$php .= "\n"
-				. $next . "'{$name}' => "
+				. $next . "'{$key}' => "
 				. $this->buildRoute($route, $next)
 				. ",\n";
 		}

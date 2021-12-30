@@ -23,7 +23,7 @@ class RouteFull_Ref extends RouteAbstract
 
 	protected function assign() : self
 	{
-		$this->name =& $this->all['name'];
+		$this->key =& $this->all['key'];
 		$this->attributes =& $this->all['attributes'];
 		$this->rule =& $this->all['rule'];
 		$this->default =& $this->all['default'];

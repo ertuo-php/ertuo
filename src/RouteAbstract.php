@@ -6,7 +6,7 @@ use function get_called_class;
 
 abstract class RouteAbstract
 {
-	public string $name = '';
+	public string $key = '';
 
 	public array $attributes = array();
 
@@ -14,9 +14,9 @@ abstract class RouteAbstract
 
 	public array $default = array('', []);
 
-	function __construct(string $name = '', array $attributes = [])
+	function __construct(string $key = '', array $attributes = [])
 	{
-		$this->name = $name;
+		$this->key = $key;
 		$this->attributes = $attributes;
 	}
 
@@ -41,11 +41,11 @@ abstract class RouteAbstract
 	/**
 	* Shortcut for creating new {@link Route}-based objects
 	*
-	* @param string $name
+	* @param string $key
 	* @param array $attributes
 	* @return self
 	*/
-	static function add(string $name = '', array $attributes = []) : self
+	static function add(string $key = '', array $attributes = []) : self
 	{
 		static $prototypes = [];
 
@@ -59,7 +59,7 @@ abstract class RouteAbstract
 		// check Ertuo\Lab\New_vs_Clone
 		//
 		$route = clone $prototypes[ $class ];
-		$route->name = $name;
+		$route->key = $key;
 		$route->attributes = $attributes;
 
 		return $route;

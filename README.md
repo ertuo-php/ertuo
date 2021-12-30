@@ -149,13 +149,15 @@ yield 'blog' => Route::add()
 });
 ```
 
-### Route Names
+### Route Keys
 
-Routes have optional names, which are used to store the result from the rule
-accepting the current value. The route names are the first argument to `Route::add()`.
+Routes have optional property called "key". It is used as the key with which to
+store the value of the accepted step from the rule into the result attributes.
+The route key is the first argument to `Route::add()`.
 ```php
-yield '' => Route::add('_locale') ... // Route name is "_locale"
+yield '' => Route::add('_locale') ... // Route key is "_locale"
 ```
+When routing, the value accepted by the above route will be present at `$result->attributes['_locale']`.
 
 ### Route Attributes
 
@@ -176,9 +178,14 @@ yield 'blog' => Route::add()->carry(['i.am' => 'the.walrus']);
 
 ### Route Rule
 
-Each route has a "rule" that is used to find if that route will accept the value of the current step from the source array. You can read more about rules in their section below.
+Each route has a "rule" that is used to find if that route will accept the
+value of the current step from the source array. You can read more about rules
+in their section below.
 
-If the value of the current step is accepted, this step is going to be included in the result path using the route name. For example, if a route named `_locale` has a rule that accepts current step `"en"`, then the result will have an element called `_locale` with `"en"` as its value.
+If the value of the current step is accepted, this step is going to be included
+in the result path using the route key. For example, if a route key is `_locale`
+and has a rule that accepts current step `"en"`, then the `$result->attributes`
+will have an element called `_locale` with `"en"` as its value.
 
 You declare rules using the `Route::rule()` method. First argument is the
 type of the rule, and the second argument is an array with options for the rule.

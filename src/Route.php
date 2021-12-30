@@ -107,7 +107,7 @@ class Route extends RouteAbstract implements ExportInterface
 	function toArray() : array
 	{
 		$export = array(
-			'name' => $this->name,
+			'key' => $this->key,
 			'attributes' => $this->attributes,
 			'rule' => $this->rule,
 			'default' => $this->default,

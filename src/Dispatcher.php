@@ -84,9 +84,9 @@ class Dispatcher implements DispatcherInterface
 				$routes = $rule->handle($current, $step, $attributes, $result);
 			} else
 			{
-				if ($step && $routes->name)
+				if ($step && $routes->key)
 				{
-					$result->attributes[ $routes->name ] = $step;
+					$result->attributes[ $routes->key ] = $step;
 				}
 
 				if (!empty($attributes))

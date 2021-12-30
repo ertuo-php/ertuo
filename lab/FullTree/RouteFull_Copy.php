@@ -18,7 +18,7 @@ class RouteFull_Copy extends RouteAbstract
 		$full = new self;
 		$full->all = $input;
 
-		$full->name = $full->all['name'];
+		$full->key = $full->all['key'];
 		$full->attributes = $full->all['attributes'];
 		$full->rule = $full->all['rule'];
 		$full->default = $full->all['default'];

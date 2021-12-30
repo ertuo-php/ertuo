@@ -14,10 +14,10 @@ class BuilderWithGenerators extends BuilderAbstract
 			. $offset . "{\n";
 
 		$next = $offset . $this->tab;
-		foreach ($routes as $name => $route)
+		foreach ($routes as $key => $route)
 		{
 			$php .= "\n" . $next
-				. "yield '{$name}' => "
+				. "yield '{$key}' => "
 				. $this->buildRoute($route, $next)
 				. ";\n";
 		}
