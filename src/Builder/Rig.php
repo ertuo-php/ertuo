@@ -11,9 +11,12 @@ class Rig implements ExportInterface
 {
 	protected $tree = array();
 
-	function __construct(ExportInterface $route)
+	function __construct(ExportInterface $route = null)
 	{
-		$this->setTree( $route->toArray() );
+		if ($route)
+		{
+			$this->setTree( $route->toArray() );
+		}
 	}
 
 	function setTree(array $tree) : self
