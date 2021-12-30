@@ -5,6 +5,8 @@ namespace Ertuo\Builder;
 use Ertuo\Builder\BuilderInterface;
 use Ertuo\ExportInterface;
 
+use function is_array;
+
 abstract class BuilderAbstract implements BuilderInterface
 {
 	protected $tab = "\t";
@@ -37,16 +39,23 @@ abstract class BuilderAbstract implements BuilderInterface
 		$attributes = $tree[ 'attributes' ] ?? [];
 		$php_attr = $this->buildArrayArgument( $attributes );
 
-		$php = "Route::add('{$name}', {$php_attr})\n";
+		$php = "Route::add('{$name}', {$php_attr})";
 
+		$rule = false;
 		if (!empty($tree[ 'rule' ]))
 		{
-			$php .= $offset . $this->buildRule( (array) $tree[ 'rule' ] );
+			if ($rule = $this->buildRule( (array) $tree[ 'rule' ] ))
+			{
+				$php .= "\n" . $offset . $rule;
+			}
 		}
 
 		if (!empty($tree[ 'default' ]))
 		{
-			$php .= $this->buildDefault( (array) $tree[ 'default' ] );
+			if ($default = $this->buildDefault( (array) $tree[ 'default' ] ))
+			{
+				$php .= ($rule ? '' : $offset) . $default;
+			}
 		}
 
 		if (!empty($tree[ 'routes' ]))
@@ -67,7 +76,15 @@ abstract class BuilderAbstract implements BuilderInterface
 		$elements = '[';
 		foreach ($args as $key => $value)
 		{
-			$elements .= "'{$key}' => '{$value}', ";
+			if (is_array($value))
+			{
+				$elements .= "'{$key}' => "
+					. $this->buildArrayArgument((array) $value)
+					. ", ";
+			} else
+			{
+				$elements .= "'{$key}' => '{$value}', ";
+			}
 		}
 		$elements .= ']';
 
@@ -97,6 +114,11 @@ abstract class BuilderAbstract implements BuilderInterface
 		$options = $rule[1] ?? [];
 		$extra = $rule[2] ?? [];
 
+		if (!$type && !$extra)
+		{
+			return '';
+		}
+
 		$php_type = (string) $type;
 		$php_options = $this->buildArrayOptions( (array) $options );
 		$php_extra = $this->buildArrayArgument( (array) $extra );
@@ -108,6 +130,11 @@ abstract class BuilderAbstract implements BuilderInterface
 	{
 		$fallback = $default[0] ?? '';
 		$failsafe = $default[1] ?? [];
+
+		if (!$fallback && !$failsafe)
+		{
+			return '';
+		}
 
 		$php_fallback = (string) $fallback;
 		$php_failsafe = $this->buildArrayArgument( $failsafe );
