@@ -1,6 +1,7 @@
 {
     "runner.bootstrap": "vendor/autoload.php",
     "runner.path": "lab",
+    "runner.file_pattern": "Benchmark_*.php",
     "runner.php_config":
     {
         "opcache.enable": 1,
@@ -9,8 +10,11 @@
     "report.generators": {
         "short": {
             "extends": "aggregate",
-            "cols": ["benchmark", "subject", "best", "mean", "mode", "worst", "stdev", "rstdev"],
-            "break": ["benchmark"]
+            "cols": [
+	        "benchmark", "subject",
+		"best", "mean", "mode", "worst",
+		"stdev", "rstdev"
+	    ]
         }
     }
 }
