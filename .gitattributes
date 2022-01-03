@@ -1,8 +1,6 @@
-/lab		export-ignore
 /tests		export-ignore
 /.github	export-ignore
 /.gitattributes	export-ignore
 /.gitignore	export-ignore
 /*.dist		export-ignore
-/phpbench.json	export-ignore
 /composer.lock	export-ignore
