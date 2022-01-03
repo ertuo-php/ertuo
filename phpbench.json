@@ -14,7 +14,8 @@
 	        "benchmark", "subject",
 		"best", "mean", "mode", "worst",
 		"stdev", "rstdev"
-	    ]
+	    ],
+            "break": ["benchmark"]
         }
     }
 }
