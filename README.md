@@ -5,9 +5,7 @@ and faster than conventional regular expression based routers.
 
 [This article explains how the implementation works and why it is fast.](http://kaloyan.info/writing/2021/12/22/ertuo-php-routing.html "Ertuo, allegedly the fastest PHP routing library")
 
-**Ertuo is 10x to 22x faster** than Symfony Compiled routes, and FastRoute
-Cached MarkBased strategy. Explore the [benchmark results](#benchmark-results)
-for more details.
+Ertuo is fast. Explore the [benchmark results](#benchmark-results) for more details.
 
 # Getting Started
 ```
@@ -643,42 +641,47 @@ php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_Array.php --report=sho
 
 ### Benchmark Results
 
-**The benchmarks show Ertuo is 10x to 22x faster**. I am comparing it to the best of
-both breeds: Symfony Compiled routes and FastRoute Cached MarkBased strategy.
+I am comparing it to the best of both breeds: Symfony Compiled routes and FastRoute Cached MarkBased strategy.
 
 You can see the results in the logs of the Github ["benchmark.yml"](https://github.com/ertuo-php/ertuo/actions/workflows/benchmark.yml) action as well.
+
+```sh
+PHPBench (1.2.3) running benchmarks...
+with configuration file: /home/runner/work/ertuo/ertuo/phpbench.json
+with PHP version 7.4.26, xdebug ❌, opcache ✔
+```
 
 #### PHP 7.4
 
 ```
 Benchmark_Bitbucket_Ertuo_Array
-+--------------+----------+----------+----------+----------+---------+---------+
-| subject      | best     | mean     | mode     | worst    | stdev   | rstdev  |
-+--------------+----------+----------+----------+----------+---------+---------+
-| benchSetup   | 1.563μs  | 1.738μs  | 1.625μs  | 2.193μs  | 0.232μs | ±13.37% |
-| benchLast    | 22.953μs | 23.086μs | 23.156μs | 23.193μs | 0.098μs | ±0.43%  |
-| benchLongest | 48.028μs | 48.523μs | 48.200μs | 49.473μs | 0.550μs | ±1.13%  |
-| benchTotal   | 33.335μs | 34.802μs | 34.129μs | 37.055μs | 1.318μs | ±3.79%  |
-+--------------+----------+----------+----------+----------+---------+---------+
++--------------+----------+----------+----------+----------+---------+--------+
+| subject      | best     | mean     | mode     | worst    | stdev   | rstdev |
++--------------+----------+----------+----------+----------+---------+--------+
+| benchSetup   | 2.653μs  | 3.003μs  | 2.889μs  | 3.548μs  | 0.298μs | ±9.93% |
+| benchLast    | 24.995μs | 25.650μs | 25.853μs | 26.183μs | 0.446μs | ±1.74% |
+| benchLongest | 48.468μs | 49.466μs | 49.003μs | 50.710μs | 0.821μs | ±1.66% |
+| benchTotal   | 33.890μs | 34.835μs | 35.067μs | 35.805μs | 0.687μs | ±1.97% |
++--------------+----------+----------+----------+----------+---------+--------+
 
 Benchmark_Bitbucket_FastRoute_Cached_MarkBased
-+--------------+-----------+-----------+-----------+-----------+----------+--------+
-| subject      | best      | mean      | mode      | worst     | stdev    | rstdev |
-+--------------+-----------+-----------+-----------+-----------+----------+--------+
-| benchSetup   | 434.010μs | 441.640μs | 443.436μs | 445.758μs | 4.054μs  | ±0.92% |
-| benchLast    | 463.970μs | 475.590μs | 471.937μs | 493.050μs | 10.359μs | ±2.18% |
-| benchLongest | 463.635μs | 471.104μs | 466.840μs | 482.458μs | 7.024μs  | ±1.49% |
-| benchTotal   | 466.383μs | 471.022μs | 471.209μs | 475.760μs | 3.154μs  | ±0.67% |
-+--------------+-----------+-----------+-----------+-----------+----------+--------+
++--------------+----------+----------+----------+----------+---------+--------+
+| subject      | best     | mean     | mode     | worst    | stdev   | rstdev |
++--------------+----------+----------+----------+----------+---------+--------+
+| benchSetup   | 5.483μs  | 6.116μs  | 5.903μs  | 7.008μs  | 0.519μs | ±8.48% |
+| benchLast    | 22.915μs | 24.745μs | 24.182μs | 26.963μs | 1.407μs | ±5.69% |
+| benchLongest | 22.395μs | 23.961μs | 24.630μs | 25.265μs | 1.127μs | ±4.71% |
+| benchTotal   | 22.745μs | 24.463μs | 23.298μs | 29.173μs | 2.395μs | ±9.79% |
++--------------+----------+----------+----------+----------+---------+--------+
 
 Benchmark_Bitbucket_Symfony_Compiled
 +--------------+-----------+-----------+-----------+-----------+----------+--------+
 | subject      | best      | mean      | mode      | worst     | stdev    | rstdev |
 +--------------+-----------+-----------+-----------+-----------+----------+--------+
-| benchSetup   | 744.888μs | 763.823μs | 759.110μs | 788.935μs | 16.288μs | ±2.13% |
-| benchLast    | 771.143μs | 789.077μs | 775.207μs | 845.318μs | 28.195μs | ±3.57% |
-| benchLongest | 779.770μs | 796.047μs | 784.029μs | 843.783μs | 24.446μs | ±3.07% |
-| benchTotal   | 768.330μs | 779.132μs | 780.188μs | 788.595μs | 6.566μs  | ±0.84% |
+| benchSetup   | 686.550μs | 713.150μs | 694.967μs | 755.925μs | 27.400μs | ±3.84% |
+| benchLast    | 747.500μs | 757.693μs | 751.065μs | 774.690μs | 10.610μs | ±1.40% |
+| benchLongest | 738.705μs | 764.282μs | 767.293μs | 786.445μs | 16.246μs | ±2.13% |
+| benchTotal   | 723.003μs | 775.095μs | 768.457μs | 818.983μs | 35.134μs | ±4.53% |
 +--------------+-----------+-----------+-----------+-----------+----------+--------+
 ```
 
@@ -689,31 +692,31 @@ Benchmark_Bitbucket_Ertuo_Array
 +--------------+----------+----------+----------+----------+---------+--------+
 | subject      | best     | mean     | mode     | worst    | stdev   | rstdev |
 +--------------+----------+----------+----------+----------+---------+--------+
-| benchSetup   | 1.088μs  | 1.122μs  | 1.095μs  | 1.230μs  | 0.055μs | ±4.87% |
-| benchLast    | 17.643μs | 18.023μs | 18.110μs | 18.275μs | 0.215μs | ±1.19% |
-| benchLongest | 37.228μs | 38.102μs | 38.447μs | 38.570μs | 0.533μs | ±1.40% |
-| benchTotal   | 26.248μs | 26.321μs | 26.278μs | 26.420μs | 0.066μs | ±0.25% |
+| benchSetup   | 4.100μs  | 4.316μs  | 4.226μs  | 4.625μs  | 0.185μs | ±4.29% |
+| benchLast    | 36.423μs | 39.722μs | 40.401μs | 41.888μs | 1.813μs | ±4.56% |
+| benchLongest | 70.518μs | 74.429μs | 73.650μs | 79.510μs | 2.968μs | ±3.99% |
+| benchTotal   | 51.593μs | 54.939μs | 52.502μs | 64.505μs | 4.919μs | ±8.95% |
 +--------------+----------+----------+----------+----------+---------+--------+
 
 Benchmark_Bitbucket_FastRoute_Cached_MarkBased
-+--------------+-----------+-----------+-----------+-----------+---------+--------+
-| subject      | best      | mean      | mode      | worst     | stdev   | rstdev |
-+--------------+-----------+-----------+-----------+-----------+---------+--------+
-| benchSetup   | 393.968μs | 395.343μs | 395.558μs | 397.070μs | 1.168μs | ±0.30% |
-| benchLast    | 414.453μs | 418.704μs | 416.828μs | 426.715μs | 4.213μs | ±1.01% |
-| benchLongest | 414.583μs | 415.215μs | 414.795μs | 416.090μs | 0.610μs | ±0.15% |
-| benchTotal   | 414.770μs | 416.675μs | 415.968μs | 418.595μs | 1.418μs | ±0.34% |
-+--------------+-----------+-----------+-----------+-----------+---------+--------+
++--------------+----------+----------+----------+----------+---------+---------+
+| subject      | best     | mean     | mode     | worst    | stdev   | rstdev  |
++--------------+----------+----------+----------+----------+---------+---------+
+| benchSetup   | 8.965μs  | 9.313μs  | 9.184μs  | 9.720μs  | 0.275μs | ±2.96%  |
+| benchLast    | 33.370μs | 35.009μs | 34.709μs | 36.935μs | 1.310μs | ±3.74%  |
+| benchLongest | 32.355μs | 35.178μs | 33.247μs | 42.960μs | 3.957μs | ±11.25% |
+| benchTotal   | 33.383μs | 35.412μs | 35.020μs | 38.030μs | 1.571μs | ±4.44%  |
++--------------+----------+----------+----------+----------+---------+---------+
 
 Benchmark_Bitbucket_Symfony_Compiled
-+--------------+-----------+-----------+-----------+-----------+---------+--------+
-| subject      | best      | mean      | mode      | worst     | stdev   | rstdev |
-+--------------+-----------+-----------+-----------+-----------+---------+--------+
-| benchSetup   | 615.460μs | 617.813μs | 616.225μs | 624.148μs | 3.258μs | ±0.53% |
-| benchLast    | 628.730μs | 631.682μs | 630.147μs | 638.015μs | 3.292μs | ±0.52% |
-| benchLongest | 630.628μs | 632.486μs | 633.406μs | 634.518μs | 1.574μs | ±0.25% |
-| benchTotal   | 630.348μs | 631.951μs | 631.563μs | 633.423μs | 1.121μs | ±0.18% |
-+--------------+-----------+-----------+-----------+-----------+---------+--------+
++--------------+-----------+-----------+-----------+-----------+----------+--------+
+| subject      | best      | mean      | mode      | worst     | stdev    | rstdev |
++--------------+-----------+-----------+-----------+-----------+----------+--------+
+| benchSetup   | 759.070μs | 769.168μs | 774.045μs | 777.118μs | 7.375μs  | ±0.96% |
+| benchLast    | 817.133μs | 829.218μs | 823.967μs | 850.080μs | 11.404μs | ±1.38% |
+| benchLongest | 806.370μs | 824.142μs | 813.049μs | 868.420μs | 22.899μs | ±2.78% |
+| benchTotal   | 804.215μs | 819.526μs | 823.862μs | 829.128μs | 8.825μs  | ±1.08% |
++--------------+-----------+-----------+-----------+-----------+----------+--------+
 ```
 
 ### Comparing with Fully Unfolded Tree
