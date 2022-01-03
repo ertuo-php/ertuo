@@ -15,12 +15,16 @@ class Benchmark_Bitbucket_Symfony_Compiled extends Benchmark_Symfony
 
 	function __construct()
 	{
-		$dumper = new CompiledUrlMatcherDumper( $this->loadedRoutes() );
-		file_put_contents(
-			$this->cached_routes = __DIR__
-				. '/Benchmark_Bitbucket/routes/symfony_cached_routes.php',
-			$dumper->dump()
-			);
+		$this->cached_routes = __DIR__
+			. '/Benchmark_Bitbucket/routes/symfony_cached_routes.php';
+		if (!is_file($this->cached_routes))
+		{
+			$dumper = new CompiledUrlMatcherDumper( $this->loadedRoutes() );
+			file_put_contents(
+				$this->cached_routes,
+				$dumper->dump()
+				);
+		}
 	}
 
 	function setupRouting()
