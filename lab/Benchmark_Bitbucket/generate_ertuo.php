@@ -7,3 +7,5 @@ $api = file(__DIR__ . '/bitbucket-api.txt');
 
 new Ertuo\Lab\Benchmark_Bitbucket\Generate\Ertuo_Generator($api);
 new Ertuo\Lab\Benchmark_Bitbucket\Generate\Ertuo_Array($api);
+
+new Ertuo\Lab\Benchmark_Bitbucket\Generate\Ertuo_Builder($api);

@@ -7,7 +7,7 @@ use Ertuo\Lab\Benchmark_Bitbucket\Benchmark_Ertuo;
 
 class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
 {
-    function loadRoutes() : Route
+    function loadRoutes() : Route 
     {
         $routes = Route::add()
         ->group(function()
@@ -19,7 +19,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                 ->rule('any', [], ['_route' => 'addon_linkers_linker_key'])
                 ->group(function()
                 {
-                    yield '' => Route::add()
+                    yield '' => Route::add()                    
                     ->group(function()
                     {
                         yield 'values' => Route::add('', ['_route' => 'addon_linkers_linker_key_values'])
@@ -40,11 +40,11 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
             ->rule('any', [], ['_route' => 'repositories_workspace'])
             ->group(function()
             {
-                yield '' => Route::add()
+                yield '' => Route::add()                
                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug'])
                 ->group(function()
                 {
-                    yield '' => Route::add()
+                    yield '' => Route::add()                    
                     ->group(function()
                     {
                         yield 'branch-restrictions' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_branch_restrictions'])
@@ -61,7 +61,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_commit_commit'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->group(function()
                             {
                                 yield 'approve' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_commit_commit_approve']);
@@ -73,7 +73,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_commit_commit_properties_app_key'])
                                 ->group(function()
                                 {
-                                    yield '' => Route::add()
+                                    yield '' => Route::add()                                    
                                     ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_commit_commit_properties_app_key_property_name']);
                                 });
 
@@ -83,7 +83,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_commit_commit_reports_reportId'])
                                 ->group(function()
                                 {
-                                    yield '' => Route::add()
+                                    yield '' => Route::add()                                    
                                     ->group(function()
                                     {
                                         yield 'annotations' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_commit_commit_reports_reportId_annotations'])
@@ -125,7 +125,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid'])
                             ->group(function()
                             {
-                                yield '' => Route::add()
+                                yield '' => Route::add()                                
                                 ->group(function()
                                 {
                                     yield 'variables' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_deployments_config_environments_environment_uuid_variables'])
@@ -149,7 +149,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_environments_environment_uuid'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->group(function()
                             {
                                 yield 'changes' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_environments_environment_uuid_changes']);
@@ -161,7 +161,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_filehistory_commit'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_filehistory_commit_path']);
                         });
 
@@ -182,7 +182,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_issues_issue_id'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->group(function()
                             {
                                 yield 'attachments' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_issues_issue_id_attachments'])
@@ -217,7 +217,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid'])
                             ->group(function()
                             {
-                                yield '' => Route::add()
+                                yield '' => Route::add()                                
                                 ->group(function()
                                 {
                                     yield 'content-uri' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pipelines_config_caches_cache_uuid_content_uri']);
@@ -231,14 +231,14 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->group(function()
                             {
                                 yield 'steps' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps'])
                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid'])
                                 ->group(function()
                                 {
-                                    yield '' => Route::add()
+                                    yield '' => Route::add()                                    
                                     ->group(function()
                                     {
                                         yield 'log' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_log']);
@@ -253,7 +253,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases_test_case_uuid'])
                                             ->group(function()
                                             {
-                                                yield '' => Route::add()
+                                                yield '' => Route::add()                                                
                                                 ->group(function()
                                                 {
                                                     yield 'test_case_reasons' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pipelines_pipeline_uuid_steps_step_uuid_test_reports_test_cases_test_case_uuid_test_case_reasons']);
@@ -280,7 +280,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid'])
                             ->group(function()
                             {
-                                yield '' => Route::add()
+                                yield '' => Route::add()                                
                                 ->group(function()
                                 {
                                     yield 'executions' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pipelines_config_schedules_schedule_uuid_executions']);
@@ -307,7 +307,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_properties_app_key'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_properties_app_key_property_name']);
                         });
 
@@ -320,7 +320,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->group(function()
                             {
                                 yield 'activity' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_activity']);
@@ -352,14 +352,14 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
 
                                 yield 'statuses' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pullrequests_pull_request_id_statuses']);
 
-                            })
+                            })                            
                             ->group(function()
                             {
                                 yield 'properties' => Route::add('', ['_route' => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties'])
                                 ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties_app_key'])
                                 ->group(function()
                                 {
-                                    yield '' => Route::add()
+                                    yield '' => Route::add()                                    
                                     ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_pullrequests_pullrequest_id_properties_app_key_property_name']);
                                 });
 
@@ -381,7 +381,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                         ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_src_commit'])
                         ->group(function()
                         {
-                            yield '' => Route::add()
+                            yield '' => Route::add()                            
                             ->rule('any', [], ['_route' => 'repositories_workspace_repo_slug_src_commit_path']);
                         });
 
@@ -398,11 +398,11 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
             ->rule('any', [], ['_route' => 'snippets_workspace'])
             ->group(function()
             {
-                yield '' => Route::add()
+                yield '' => Route::add()                
                 ->rule('any', [], ['_route' => 'snippets_workspace_encoded_id'])
                 ->group(function()
                 {
-                    yield '' => Route::add()
+                    yield '' => Route::add()                    
                     ->group(function()
                     {
                         yield 'comments' => Route::add('', ['_route' => 'snippets_workspace_encoded_id_comments'])
@@ -422,13 +422,13 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                     ->rule('any', [], ['_route' => 'snippets_workspace_encoded_id_node_id'])
                     ->group(function()
                     {
-                        yield '' => Route::add()
+                        yield '' => Route::add()                        
                         ->group(function()
                         {
                             yield 'files' => Route::add('', ['_route' => 'snippets_workspace_encoded_id_node_id_files'])
                             ->rule('any', [], ['_route' => 'snippets_workspace_encoded_id_node_id_files_path']);
 
-                        })
+                        })                        
                         ->group(function()
                         {
                             yield 'diff' => Route::add('', ['_route' => 'snippets_workspace_encoded_id_revision_diff']);
@@ -444,7 +444,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
             ->rule('any', [], ['_route' => 'teams_username'])
             ->group(function()
             {
-                yield '' => Route::add()
+                yield '' => Route::add()                
                 ->group(function()
                 {
                     yield 'followers' => Route::add('', ['_route' => 'teams_username_followers']);
@@ -482,7 +482,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
 
                     });
 
-                })
+                })                
                 ->group(function()
                 {
                     yield 'repositories' => Route::add('', ['_route' => 'teams_workspace_repositories']);
@@ -513,7 +513,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
             ->rule('any', [], ['_route' => 'users_selected_user'])
             ->group(function()
             {
-                yield '' => Route::add()
+                yield '' => Route::add()                
                 ->group(function()
                 {
                     yield 'hooks' => Route::add('', ['_route' => 'users_selected_user_hooks'])
@@ -531,7 +531,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                     ->rule('any', [], ['_route' => 'users_selected_user_properties_app_key'])
                     ->group(function()
                     {
-                        yield '' => Route::add()
+                        yield '' => Route::add()                        
                         ->rule('any', [], ['_route' => 'users_selected_user_properties_app_key_property_name']);
                     });
 
@@ -545,12 +545,12 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                     yield 'ssh-keys' => Route::add('', ['_route' => 'users_selected_user_ssh_keys'])
                     ->rule('any', [], ['_route' => 'users_selected_user_ssh_keys_key_id']);
 
-                })
+                })                
                 ->group(function()
                 {
                     yield 'members' => Route::add('', ['_route' => 'users_username_members']);
 
-                })
+                })                
                 ->group(function()
                 {
                     yield 'repositories' => Route::add('', ['_route' => 'users_workspace_repositories']);
@@ -562,7 +562,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
             ->rule('any', [], ['_route' => 'workspaces_workspace'])
             ->group(function()
             {
-                yield '' => Route::add()
+                yield '' => Route::add()                
                 ->group(function()
                 {
                     yield 'hooks' => Route::add('', ['_route' => 'workspaces_workspace_hooks'])
@@ -594,7 +594,7 @@ class Benchmark_Bitbucket_Ertuo_Generator extends Benchmark_Ertuo
                             ->rule('any', [], ['_route' => 'workspaces_workspace_pipelines_config_identity_oidc_well_known'])
                             ->group(function()
                             {
-                                yield '' => Route::add()
+                                yield '' => Route::add()                                
                                 ->group(function()
                                 {
                                     yield 'openid-configuration' => Route::add('', ['_route' => 'workspaces_workspace_pipelines_config_identity_oidc_well_known_openid_configuration']);
