@@ -1,12 +1,15 @@
 {
     "runner.bootstrap": "vendor/autoload.php",
     "runner.path": "lab",
+    "runner.php_config":
+    {
+        "opcache.enable": 1,
+        "opcache.enable_cli": 1
+    },
     "report.generators": {
         "short": {
             "extends": "aggregate",
-            "cols": [ "benchmark", "subject",
-		    "best", "mean", "mode", "worst",
-		    "stdev", "rstdev"],
+            "cols": ["benchmark", "subject", "best", "mean", "mode", "worst", "stdev", "rstdev"],
             "break": ["benchmark"]
         }
     }
