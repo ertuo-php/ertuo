@@ -21,13 +21,13 @@ abstract class BuilderAbstract implements BuilderInterface
 	*/
 	function buildTree(ExportInterface $route) : string
 	{
-		$php = "<?php\n"
+		$php = '<?php'
 			. "\n"
-			. "use Ertuo\Route;\n"
+			. "\n" . "use Ertuo\Route;"
 			. "\n"
-			. "return \$routes = "
+			. "\n" . "return \$routes = "
 				. $this->buildRoute($route->toArray(), '')
-				. ";\n";
+			. ";\n";
 
 		return $php;
 	}
