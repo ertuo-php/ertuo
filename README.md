@@ -611,6 +611,10 @@ For a step based routing process like Ertuo the `benchLongest` must be the slowe
 
 The `benchTotal` is just to get an overall average measurement for routing to all of the routes from the list.
 
+There is one additional benchmark added, that is called `benchSetup`. It is used to provide a baseline to compare all of the routing benchmarks against it, as it only tracks how much time is spent to setup the process before the actual routing. The setup is usually just loading up the route collection.
+
+Compare the results from this benchmark if you want to monitor how much time is spent on the setup part of the routing and how time does the real dispatching takes. My observations are that for conventional routing libraries such as Symfony Routing and FastRoute the fully loaded route collection from the setup takes way too much time compared to the actual dispatching.
+
 ### Comparing with Symfony Routing and FastRoute
 
 I've added the same benchmarks with Symfony Routing and FastRoute as I did in https://github.com/kktsvetkov/benchmark-php-routing:
@@ -725,13 +729,6 @@ One assumption I wanted to benchmark was if the routing process will be quicker 
 
 To test this I've added two more `Route` classes that use the output from `Route::toArray()` as their route definitions. Both classes are slightly different in how they move down the routes tree with one using references and the other creating new objects.
 ```
-php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_FullTree_Copy.php --report=short
-php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_FullTree_Ref.php --report=short
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_UnfoldedTree_Copy.php --report=short
+php vendor/bin/phpbench run lab/Benchmark_Bitbucket_Ertuo_UnfoldedTree_Ref.php --report=short
 ```
-Both benchmarks are slower then the runtime exploring. Read the "Setup Benchmarks" section to learn why.
-
-### Setup Benchmarks
-
-There is one additional benchmark added, that is called [`benchSetup()`](lab/Benchmark_Bitbucket/Benchmark.php). It is used to provide a baseline to compare all of the routing benchmarks against it, as it only tracks how much time is spent to setup the process before the actual routing. The setup is usually just loading up the route collection.
-
-Compare the results from this benchmark if you want to monitor how much time is spent on the setup part of the routing and how time does the real dispatching takes. My observations are that for conventional routing libraries such as Symfony Routing and FastRoute the fully loaded route collection from the setup takes way too much time compared to the actual dispatching.

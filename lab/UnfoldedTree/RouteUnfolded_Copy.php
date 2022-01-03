@@ -1,15 +1,15 @@
 <?php
 
-namespace Ertuo\Lab\FullTree;
+namespace Ertuo\Lab\UnfoldedTree;
 
 use Ertuo\RouteAbstract;
 
 /**
-* Route class that stores the complete full tree inside it
+* Route class that stores the complete unfolded tree inside it
 *
-* @see Ertuo\Lab\Benchmark_Bitbucket_Ertuo_FullTree
+* @see Ertuo\Lab\Benchmark_Bitbucket_Ertuo_UnfoldedTree
 */
-class RouteFull_Copy extends RouteAbstract
+class RouteUnfolded_Copy extends RouteAbstract
 {
 	private $all;
 

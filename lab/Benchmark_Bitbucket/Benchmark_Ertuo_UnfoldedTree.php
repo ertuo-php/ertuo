@@ -10,32 +10,32 @@ use Ertuo\Lab\Benchmark_Bitbucket_Ertuo_Array;
 use function file_put_contents;
 use function var_export;
 
-abstract class Benchmark_Ertuo_FullTree extends Benchmark_Bitbucket_Ertuo_Array
+abstract class Benchmark_Ertuo_UnfoldedTree extends Benchmark_Bitbucket_Ertuo_Array
 {
 	protected $routeFullClass;
 
-	protected $cachedRoutesFile;
+	protected $unfoldedRoutesFile;
 
 	function __construct()
 	{
-		file_put_contents(
-			$this->cachedRoutesFile = __DIR__
-				. '/routes/ertuo_full_routes.php',
-			$this->dump( $this->loadRoutes() )
-			);
-	}
+		$this->unfoldedRoutesFile = __DIR__
+			. '/routes/ertuo_unfolded_routes.php';
 
-	function dump(Route $routes) : string
-	{
-		return '<?php return '
-			. var_export( $routes->toArray(), true)
-			. ';';
+		if (!is_file($this->unfoldedRoutesFile))
+		{
+			file_put_contents(
+				$this->unfoldedRoutesFile,
+				'<?php return '
+					. var_export( $this->loadRoutes()->toArray(), true)
+					. ';'
+				);
+		}
 	}
 
 	function setupRouting()
 	{
 		$class = $this->routeFullClass;
-		$routes = $class::fromArray( include $this->cachedRoutesFile );
+		$routes = $class::fromArray( include $this->unfoldedRoutesFile );
 
 		return new Dispatcher($routes);
 	}
