@@ -413,13 +413,8 @@ whether some details have already been collected in the result or not.
 You can dump of all of the routes as array using `Route::toArray()`. This is
 helpful in situations when you need to work with the whole complete set of routes.
 
-This is used internally by the "builders". You can read more about them in the section below.
-
-One exotic thing I used `Route::toArray()` for is a benchmark comparing reading
-from a completely unfolded tree vs. progressively exploring the tree at runtime.
-As you might have guessed it, runtime is faster. This was again to prove the
-point that routes declaration eats up a lot of time in advance of the actual
-routing process.
+This is used internally by the "builders" and the unfolded routes.
+You can read more about them in the section below.
 
 # Builders
 
@@ -458,8 +453,7 @@ generators.
 
 The generated code for the route tree looks something like this:
 
-```
-<?php
+```php
 
 use Ertuo\Route;
 
@@ -473,7 +467,41 @@ return $routes = Route::add('_app', [])
         ->rule('enum', ['en', 'de', ], [])->default('en', [])
         ->group(function()
         {
-            return array( ...
+            return array( ... );
+	})
+    );
+});	 
+```
+
+# Unfolded Routes
+
+There are benefits in working with "constant" arrays when `opcache` is enabled.
+The "constant" arrays are such that are only read and they are never changed.
+
+To take advantage of this, you can use the `UnfoldedRoute` class. It stores a
+fully unfolded routes tree that is a complete set of routes created from
+`Route::toArray()` or other implementations of `ExportInterface`.
+
+```php
+use Ertuo\Route;
+use Ertuo\UnfoldedRoute;
+
+$unfoldedRoutesFilename = '/somewhere/where/routes/live/unfolded.php';
+
+if (!is_file($unfoldedRoutesFilename))
+{
+	$routes = Route::add('_locale')->rule( ... );
+
+	file_put_contents(
+		$unfoldedRoutesFilename,
+		'<?php return '
+			. var_export($routes->toArray(), true)
+			. ';'
+	);
+}
+
+$unfolded = include $unfoldedRoutesFilename;
+$routes = UnfoldedRoute::fromArray($unfolded);
 ```
 
 # A Better Example

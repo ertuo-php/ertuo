@@ -3,10 +3,11 @@
 namespace Ertuo\Tests\Unabridged;
 
 use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 class Admin_Test extends Web_Test
 {
-	function getRoutes() : Route
+	function getRoutes() : RouteAbstract
 	{
 		return Route::add('_app')
 			->rule('enum', ['admin', 'api'])

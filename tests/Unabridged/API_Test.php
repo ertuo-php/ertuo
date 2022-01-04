@@ -2,11 +2,12 @@
 
 namespace Ertuo\Tests\Unabridged;
 
-use Ertuo\Route; 
+use Ertuo\Route;
+use Ertuo\RouteAbstract;
 
 class API_Test extends Web_Test
 {
-	function getRoutes() : Route
+	function getRoutes() : RouteAbstract
 	{
 		return Route::add('_app')
 		->rule('enum', ['api', 'admin'])->default('web')

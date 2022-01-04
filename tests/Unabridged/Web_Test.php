@@ -3,13 +3,14 @@
 namespace Ertuo\Tests\Unabridged;
 
 use Ertuo\Route;
+use Ertuo\RouteAbstract;
 use Ertuo\Dispatcher;
 
 use PHPUnit\Framework\TestCase;
 
 class Web_Test extends TestCase
 {
-	function getRoutes() : Route
+	function getRoutes() : RouteAbstract
 	{
 		return Route::add('_app')
 		->rule('enum', ['api', 'admin'])->default('web')
